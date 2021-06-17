@@ -1,0 +1,25 @@
+# NetMHCIIpan version 3.2
+
+# Input is in FASTA format
+
+# Peptide length 15
+
+# Threshold for Strong binding peptides (%Rank)	2%
+# Threshold for Weak binding peptides (%Rank)	10%
+
+# Allele: DRB1_0101
+--------------------------------------------------------------------------------------------------------------------------------------------
+ Seq        Allele              Peptide        Identity  Pos        Core  Core_Rel 1-log50k(aff)  Affinity(nM)    %Rank Exp_Bind  BindingLevel
+--------------------------------------------------------------------------------------------------------------------------------------------
+   1     DRB1_0101      AVLWAGVAFLAFLQL sp|L0T550|RIP2_    2   LWAGVAFLA     0.340         0.510        201.09    39.00      NA       
+   2     DRB1_0101      VLWAGVAFLAFLQLT sp|L0T550|RIP2_    1   LWAGVAFLA     0.335         0.475        293.98    47.00      NA       
+   3     DRB1_0101      LWAGVAFLAFLQLTA sp|L0T550|RIP2_    6   FLAFLQLTA     0.440         0.524        172.31    36.00      NA       
+   4     DRB1_0101      WAGVAFLAFLQLTAL sp|L0T550|RIP2_    5   FLAFLQLTA     0.485         0.566        109.07    26.00      NA       
+   5     DRB1_0101      AGVAFLAFLQLTALV sp|L0T550|RIP2_    4   FLAFLQLTA     0.425         0.602         73.94    19.00      NA       
+   6     DRB1_0101      GVAFLAFLQLTALVL sp|L0T550|RIP2_    6   FLQLTALVL     0.620         0.680         31.93     7.00      NA   <=WB
+   7     DRB1_0101      VAFLAFLQLTALVLN sp|L0T550|RIP2_    5   FLQLTALVL     0.675         0.688         29.20     6.50      NA   <=WB
+   8     DRB1_0101      AFLAFLQLTALVLNL sp|L0T550|RIP2_    4   FLQLTALVL     0.650         0.680         32.04     7.00      NA   <=WB
+   9     DRB1_0101      FLAFLQLTALVLNLL sp|L0T550|RIP2_    3   FLQLTALVL     0.645         0.669         35.92     8.50      NA   <=WB
+--------------------------------------------------------------------------------------------------------------------------------------------
+Number of strong binders: 0 Number of weak binders: 4
+--------------------------------------------------------------------------------------------------------------------------------------------

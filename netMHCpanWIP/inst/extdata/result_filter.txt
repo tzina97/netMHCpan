@@ -1,0 +1,22 @@
+# NetMHCIIpan version 3.2
+
+# Input is in FASTA format
+
+# Peptide length 15
+
+# Threshold for Strong binding peptides (%Rank)	2%
+# Threshold for Weak binding peptides (%Rank)	10%
+
+# Threshold for filtering output (%Rank)	10%
+
+# Allele: DRB1_0101
+--------------------------------------------------------------------------------------------------------------------------------------------
+ Seq        Allele              Peptide        Identity  Pos        Core  Core_Rel 1-log50k(aff)  Affinity(nM)    %Rank Exp_Bind  BindingLevel
+--------------------------------------------------------------------------------------------------------------------------------------------
+   6     DRB1_0101      GVAFLAFLQLTALVL sp|L0T550|RIP2_    6   FLQLTALVL     0.620         0.680         31.93     7.00      NA   <=WB
+   7     DRB1_0101      VAFLAFLQLTALVLN sp|L0T550|RIP2_    5   FLQLTALVL     0.675         0.688         29.20     6.50      NA   <=WB
+   8     DRB1_0101      AFLAFLQLTALVLNL sp|L0T550|RIP2_    4   FLQLTALVL     0.650         0.680         32.04     7.00      NA   <=WB
+   9     DRB1_0101      FLAFLQLTALVLNLL sp|L0T550|RIP2_    3   FLQLTALVL     0.645         0.669         35.92     8.50      NA   <=WB
+--------------------------------------------------------------------------------------------------------------------------------------------
+Number of strong binders: 0 Number of weak binders: 4
+--------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,52 @@
+language: r
+cache: packages
+
+matrix:
+  include:
+  - r: release
+    os: linux
+    env: INSTALL_NETMHC2PAN=true
+  - r: devel
+    os: linux
+    env: INSTALL_NETMHC2PAN=false
+
+r_packages:
+  - devtools
+  - hunspell
+
+r_github_packages:
+  - jimhester/covr
+  - jimhester/lintr
+  - MangoTheCat/goodpractice
+  - ropensci/spelling
+
+before_script:
+  # tcsh
+  - sudo apt install tcsh
+  - which tcsh
+  # NetMHCIIpan
+  - if [[ "$INSTALL_NETMHC2PAN" == true ]]; then ./scripts/install_netmhc2pan.sh; fi
+  # LAPACK
+  - sudo apt-get install liblapack-dev -y
+  # proselint
+  - sudo pip install proselint
+
+after_success:
+  - if [[ "$INSTALL_NETMHC2PAN" == true ]]; then Rscript -e 'covr::codecov()'; fi
+  - if [[ "$INSTALL_NETMHC2PAN" == true ]]; then Rscript -e 'goodpractice::gp()'; fi
+  - if [[ "$INSTALL_NETMHC2PAN" == false ]]; then Rscript -e 'lintr::lint_package()'; fi
+  - if [[ "$INSTALL_NETMHC2PAN" == false ]]; then proselint *.md | egrep -v "typography\.symbols\.curly_quotes"; fi
+  - # No local files created
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then if [[ $(egrep -R "\"~" --include={*.R,*.Rmd}) ]]; then echo "Local file created"; exit 1; fi; fi
+  - Rscript -e 'netmhc2pan::netmhc2pan_report()'
+  - Rscript scripts/issue_3.R
+  # Download thesis
+  - wget https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf
+
+after_failure:
+  - Rscript -e 'remotes::install_github("richelbilderbeek/netmhc2pan")'
+  - Rscript -e 'netmhc2pan::netmhc2pan_report()'
+  - ls
+  # Download thesis
+  - wget https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf
+
