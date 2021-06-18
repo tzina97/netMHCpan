@@ -4,21 +4,18 @@
 \alias{check_alleles}
 \title{Check the allele names}
 \usage{
-check_alleles(
-  alleles,
-  netmhc2pan_folder_name = get_default_netmhc2pan_folder()
-)
+check_alleles(alleles, netMHCpan_folder_name = get_default_netMHCpan_folder())
 }
 \arguments{
 \item{alleles}{one or more alleles, e.g. \code{DRB1_0101}.
-See \link{get_netmhc2pan_alleles} for a full list}
+See \link{get_netMHCpan_alleles} for a full list}
 
-\item{netmhc2pan_folder_name}{the folder (to be) used by NetMHCIIpan.
-From this location, a subfolder for NetMHCIIpan is created.
-Use \link{get_default_netmhc2pan_folder} to see the location
-of the default NetMHCIIpan folder.
-Use \link{get_default_netmhc2pan_subfolder} to see the location
-of the default NetMHCIIpan subfolder.}
+\item{netMHCpan_folder_name}{the folder (to be) used by NetMHCpan.
+From this location, a subfolder for NetMHCpan is created.
+Use \link{get_default_netMHCpan_folder} to see the location
+of the default NetMHCpan folder.
+Use \link{get_default_netMHCpan_subfolder} to see the location
+of the default NetMHCpan subfolder.}
 }
 \value{
 nothing

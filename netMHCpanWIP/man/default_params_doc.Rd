@@ -11,14 +11,14 @@ default_params_doc(
   fasta_filename,
   folder_name,
   mhc_haplotype,
-  netmhc2pan_archive_filename,
-  netmhc2pan_bin_tarfile_path,
-  netmhc2pan_bin_url,
-  netmhc2pan_data_tarfile_path,
-  netmhc2pan_data_url,
-  netmhc2pan_folder_name,
-  netmhc2pan_subfolder,
-  netmhc2pan_version,
+  netMHCpan_archive_filename,
+  netMHCpan_bin_tarfile_path,
+  netMHCpan_bin_url,
+  netMHCpan_data_tarfile_path,
+  netMHCpan_data_url,
+  netMHCpan_folder_name,
+  netMHCpan_subfolder,
+  netMHCpan_version,
   os,
   peptide_length,
   peptides,
@@ -32,56 +32,57 @@ default_params_doc(
 }
 \arguments{
 \item{alleles}{one or more alleles, e.g. \code{DRB1_0101}.
-See \link{get_netmhc2pan_alleles} for a full list}
+See \link{get_netMHCpan_alleles} for a full list}
 
-\item{do_filter}{set to TRUE if the results of NetMHCIIpan must be filtered}
+\item{do_filter}{set to TRUE if the results of NetMHCpan must be filtered}
 
 \item{fasta_filename}{the name of a FASTA file with protein sequences}
 
-\item{folder_name}{the folder to install NetMHCIIpan, which is
+\item{folder_name}{the folder to install NetMHCpan, which is
 \code{"/home/[usename]/.local/share"} by default}
 
 \item{mhc_haplotype}{one MHC haplotype, e.g. \code{DRB1_0101}.
-See \link{get_netmhc2pan_alleles} for a full list}
+See \link{get_netMHCpan_alleles} for a full list}
 
-\item{netmhc2pan_archive_filename}{the NetMHC2pan archive
-filename, for example \code{netMHCIIpan-3.2.Linux.tar.gz},
-which is used in installation of NetMHC2pan.
-Use \link{get_netmhc2pan_archive_filename} to get this filename.}
+\item{netMHCpan_archive_filename}{the NetMHCpan archive
+filename, for example \code{netMHCpan-4.1.Linux.tar.gz},
+which is used in installation of NetMHCpan.
+Use \link{get_netMHCpan_archive_filename} to get this filename.}
 
-\item{netmhc2pan_bin_tarfile_path}{path of the
-NetMHCIIpan binary tarball file}
+\item{netMHCpan_bin_tarfile_path}{path of the
+  NetMHCpan binary tarball file
+##This needs CHANGING}
 
-\item{netmhc2pan_bin_url}{URL to download the
-NetMHCIIpan binary tarball file from,
+\item{netMHCpan_bin_url}{URL to download the
+NetMHCpan binary tarball file from,
 similar to, for example,
-\code{https://www.cbs.dtu.dk/download/12345678-1234-1234-1234-123456789ABC}.
-Use \link{get_netmhc2pan_bin_url} to get the default URL.}
+\code{https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz}.
+Use \link{get_netMHCpan_bin_url} to get the default URL.}
 
-\item{netmhc2pan_data_tarfile_path}{path of the
-NetMHCIIpan data tarball file}
+\item{netMHCpan_data_tarfile_path}{path of the
+NetMHCpan data tarball file}
 
-\item{netmhc2pan_data_url}{URL to download the
-NetMHCIIpan data tarball file from,
+\item{netMHCpan_data_url}{URL to download the
+NetMHCpan data tarball file from,
 similar to, for example,
-\url{https://www.cbs.dtu.dk/services/NetMHCIIpan-3.2/data.Linux.tar.gz}.
+\url{https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz}.
 Use \link{get_netmhc2pan_data_url} to get the default URL.}
 
-\item{netmhc2pan_folder_name}{the folder (to be) used by NetMHCIIpan.
-From this location, a subfolder for NetMHCIIpan is created.
-Use \link{get_default_netmhc2pan_folder} to see the location
-of the default NetMHCIIpan folder.
-Use \link{get_default_netmhc2pan_subfolder} to see the location
-of the default NetMHCIIpan subfolder.}
+\item{netMHCpan_folder_name}{the folder (to be) used by NetMHCpan.
+From this location, a subfolder for NetMHCpan is created.
+Use \link{get_default_netMHCpan_folder} to see the location
+of the default NetMHCpan folder.
+Use \link{get_default_netMHCpan_subfolder} to see the location
+of the default NetMHCpan subfolder.}
 
-\item{netmhc2pan_subfolder}{the subfolder (to be) used by NetMHCIIpan.
-Use \link{get_default_netmhc2pan_subfolder} to see the location
-of the default NetMHCIIpan subfolder}
+\item{netMHCpan_subfolder}{the subfolder (to be) used by NetMHCpan.
+Use \link{get_default_netMHCpan_subfolder} to see the location
+of the default NetMHCpan subfolder}
 
-\item{netmhc2pan_version}{the NetMHCIIpan version,
+\item{netMHCpan_version}{the NetMHCpan version,
 for example \code{3.2}.
-Use \link{get_default_netmhc2pan_version} to get the default
-NetMHCIIpan version}
+Use \link{get_default_netMHCpan_version} to get the default
+NetMHCpan version}
 
 \item{os}{the operating system as obtained by \code{rappdirs::app_dir()$os}.
 \code{netmhc2pan} supports Linux ('\code{unix}') only}
