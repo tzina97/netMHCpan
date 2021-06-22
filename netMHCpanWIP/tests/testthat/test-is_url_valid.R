@@ -7,9 +7,9 @@ test_that("be verbose", {
 
   expect_message(
     is_url_valid(
-      netmhc2pan_bin_url = "invalid",
+      netMHCpan_bin_url = "invalid",
       verbose = TRUE
     ),
-    "netmhc2pan_bin_url"
+    "netMHCpan_bin_url"
   )
 })

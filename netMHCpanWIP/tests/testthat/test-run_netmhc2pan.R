@@ -1,11 +1,11 @@
 test_that("use", {
-  if (!is_netmhc2pan_installed()) return()
+  if (!is_netMHCpan_installed()) return()
 
   fasta_filename <- system.file(
-    "extdata", "example.fasta", package = "netmhc2pan"
+    "extdata", "example.fasta", package = "netMHCpan"
   )
   temp_xls_filename <- tempfile()
-  df <- run_netmhc2pan(
+  df <- run_netMHCpan(
     fasta_filename,
     alleles = "HLA-DPA10105-DPB112501",
     peptide_length = 15,
@@ -38,16 +38,16 @@ test_that("use", {
 })
 
 test_that("use, multiple alleles", {
-  if (!is_netmhc2pan_installed()) return()
+  if (!is_netMHCpan_installed()) return()
 
   alleles <- c("DRB1_0101", "DRB1_0102")
-  testit::assert(is_netmhc2pan_installed())
-  testit::assert(all(alleles %in% get_netmhc2pan_alleles()))
+  testit::assert(is_netMHCpan_installed())
+  testit::assert(all(alleles %in% get_netMHCpan_alleles()))
   fasta_filename <- system.file(
-    "extdata", "example.fasta", package = "netmhc2pan"
+    "extdata", "example.fasta", package = "netMHCpan"
   )
   temp_xls_filename <- tempfile()
-  df <- run_netmhc2pan(
+  df <- run_netMHCpan(
     fasta_filename = fasta_filename,
     alleles = alleles,
     temp_xls_filename = temp_xls_filename
@@ -60,12 +60,12 @@ test_that("use, multiple alleles", {
 
 test_that("abuse", {
 
-  if (!is_netmhc2pan_installed()) return()
+  if (!is_netMHCpan_installed()) return()
 
   fasta_filename <- tempfile()
   writeLines("Nonsense", fasta_filename)
   expect_error(
-    run_netmhc2pan(
+    run_netMHCpan(
       fasta_filename = fasta_filename,
       alleles = "HLA-DPA10105-DPB112501"
     ),
@@ -77,7 +77,7 @@ test_that("abuse", {
     "extdata", "example.fasta", package = "netmhc2pan"
   )
   expect_error(
-    run_netmhc2pan(
+    run_netMHCpan(
       fasta_filename = fasta_filename,
       alleles = "nonsense"
     ),
@@ -88,12 +88,12 @@ test_that("abuse", {
 test_that("bug bbbq_1_fast", {
   # From (private) GitHub repo:
   # https://github.com/richelbilderbeek/bbbq_article/issues/55
-  if (!is_netmhc2pan_installed()) return()
+  if (!is_netMHCpan_installed()) return()
 
   fasta_filename <- tempfile()
   readr::write_lines(x = c(">seq1", "GTGG"), fasta_filename)
   expect_error(
-    run_netmhc2pan(
+    run_netMHCpan(
       fasta_filename,
       alleles = "DRB1_0101",
       peptide_length = 13

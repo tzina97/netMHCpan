@@ -8,7 +8,7 @@ uninstall_netMHCpan <- function(
   if (!is_netMHCpan_installed(netMHCpan_folder_name)
   ) {
     stop(
-      "Cannot uninstall absent NetMHCIIpan ",
+      "Cannot uninstall absent NetMHCpan ",
       "at folder '", netMHCpan_folder_name, "'"
     )
   }

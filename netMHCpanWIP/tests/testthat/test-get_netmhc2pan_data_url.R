@@ -1,6 +1,6 @@
 test_that("use", {
   expect_equal(
-    get_netmhc2pan_data_url(),
-    "https://www.cbs.dtu.dk/services/NetMHCIIpan-3.2/data.Linux.tar.gz"
+    get_netMHCpan_data_url(),
+    "https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz"
   )
 })

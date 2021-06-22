@@ -1,4 +1,4 @@
 test_that("use", {
-  if (!is_netmhc2pan_installed()) return()
-  expect_true(is_netmhc2pan_haplotype(get_netmhc2pan_alleles()[42]))
+  if (!is_netMHCpan_installed()) return()
+  expect_true(is_netMHCpan_haplotype(get_netMHCpan_alleles()[42]))
 })

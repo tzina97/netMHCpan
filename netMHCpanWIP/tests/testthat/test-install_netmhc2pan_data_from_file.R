@@ -4,29 +4,29 @@ test_that("use", {
   if (!is_url_valid()) return()
 
   # Data tarball: use local version if available
-  netmhc2pan_data_tarfile_path <- tempfile()
+  netMHCpan_data_tarfile_path <- tempfile()
   if (file.exists("~/data.Linux.tar.gz")) {
     file.copy(
       from = "~/data.Linux.tar.gz",
-      netmhc2pan_data_tarfile_path
+      netMHCpan_data_tarfile_path
     )
   } else {
-    download_netmhc2pan_data(
-      netmhc2pan_data_tarfile_path = netmhc2pan_data_tarfile_path
+    download_netMHCpan_data(
+      netMHCpan_data_tarfile_path = netMHCpan_data_tarfile_path
     )
   }
-  expect_true(file.exists(netmhc2pan_data_tarfile_path))
+  expect_true(file.exists(netMHCpan_data_tarfile_path))
 
-  netmhc2pan_folder_name <- tempdir()
+  netMHCpan_folder_name <- tempdir()
 
-  # Re-install NetMHCIIpan data
-  install_netmhc2pan_data_from_file(
-    netmhc2pan_data_tarfile_path = netmhc2pan_data_tarfile_path,
-    netmhc2pan_folder_name = netmhc2pan_folder_name
+  # Re-install NetMHCpan data
+  install_netMHCpan_data_from_file(
+    netMHCpan_data_tarfile_path = netMHCpan_data_tarfile_path,
+    netMHCpan_folder_name = netMHCpan_folder_name
   )
 
   expect_error(
-    install_netmhc2pan_data(netmhc2pan_folder_name = netmhc2pan_folder_name),
-    "NetMHCIIpan data is already installed"
+    install_netMHCpan_data(netMHCpan_folder_name = netMHCpan_folder_name),
+    "NetMHCpan data is already installed"
   )
 })

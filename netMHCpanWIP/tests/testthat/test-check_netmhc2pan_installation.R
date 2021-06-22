@@ -1,8 +1,8 @@
 test_that("use", {
-  if (is_netmhc2pan_installed()) {
-    expect_silent(check_netmhc2pan_installation())
+  if (is_netMHCpan_installed()) {
+    expect_silent(check_netMHCpan_installation())
   } else {
-    expect_error(check_netmhc2pan_installation())
+    expect_error(check_netMHCpan_installation())
   }
 })
 
@@ -11,36 +11,36 @@ test_that("abuse", {
   if (!is_on_travis()) return()
   if (!is_url_valid()) return()
 
-  netmhc2pan_folder_name <- tempfile()
-  if (dir.exists(netmhc2pan_folder_name)) {
-    unlink(netmhc2pan_folder_name, recursive = TRUE)
+  netMHCpan_folder_name <- tempfile()
+  if (dir.exists(netMHCpan_folder_name)) {
+    unlink(netMHCpan_folder_name, recursive = TRUE)
   }
-  expect_true(!dir.exists(netmhc2pan_folder_name))
+  expect_true(!dir.exists(netMHCpan_folder_name))
 
   expect_true(
-    !is_netmhc2pan_installed(
-      netmhc2pan_folder_name = netmhc2pan_folder_name
+    !is_netMHCpan_installed(
+      netMHCpan_folder_name = netMHCpan_folder_name
     )
   )
   expect_error(
-    check_netmhc2pan_installation(netmhc2pan_folder_name),
-    "NetMHCIIpan binary not found at"
+    check_netMHCpan_installation(netMHCpan_folder_name),
+    "NetMHCpan binary not found at"
   )
 
-  install_netmhc2pan_bin(netmhc2pan_folder_name = netmhc2pan_folder_name)
+  install_netMHCpan_bin(netMHCpan_folder_name = netMHCpan_folder_name)
   expect_error(
-    check_netmhc2pan_installation(netmhc2pan_folder_name),
-    "NetMHCIIpan data not found at"
+    check_netMHCpan_installation(netMHCpan_folder_name),
+    "NetMHCpan data not found at"
   )
 
-  install_netmhc2pan_data(netmhc2pan_folder_name = netmhc2pan_folder_name)
+  install_netMHCpan_data(netMHCpan_folder_name = netMHCpan_folder_name)
   expect_error(
-    check_netmhc2pan_installation(netmhc2pan_folder_name),
-    "NetMHCIIpan not set up"
+    check_netMHCpan_installation(netMHCpan_folder_name),
+    "NetMHCpan not set up"
   )
 
-  set_up_netmhc2pan(netmhc2pan_folder_name = netmhc2pan_folder_name)
+  set_up_netMHCpan(netMHCpan_folder_name = netMHCpan_folder_name)
   expect_silent(
-    check_netmhc2pan_installation(netmhc2pan_folder_name)
+    check_netMHCpan_installation(netMHCpan_folder_name)
   )
 })

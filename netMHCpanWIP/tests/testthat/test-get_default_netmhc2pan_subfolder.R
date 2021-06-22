@@ -1,6 +1,6 @@
 test_that("use", {
   expect_equal(
-    basename(get_default_netmhc2pan_subfolder()),
-    paste0("netMHCIIpan-", get_default_netmhc2pan_version())
+    basename(get_default_netMHCpan_subfolder()),
+    paste0("netMHCpan-", get_default_netMHCpan_version())
   )
 })
