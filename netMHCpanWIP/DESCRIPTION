@@ -1,5 +1,5 @@
-Package: netmhc2pan
-Title: Interface to 'NetMHCIIpan'
+Package: netMHCpan
+Title: Interface to 'NetMHCpan'
 Version: 1.3.1
 Authors@R: c(
     person("Richèl J.C.", "Bilderbeek", email = "richel@richelbilderbeek.nl", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1107-7049")),
@@ -7,13 +7,13 @@ Authors@R: c(
 Maintainer: Richèl J.C. Bilderbeek <richel@richelbilderbeek.nl>
 Description: The field of immunology benefits from software that can
     predict which peptide sequences trigger an immune response.
-    'NetMHCIIpan' is a such a tool: it predicts the
+    'NetMHCpan' is a such a tool: it predicts the
     binding strength of a short peptide to a Major Histocompatibility
-    Complex class II (MHC-II) molecule.
-    'NetMHCIIpan' can be used from a web server at 
-    <https://services.healthtech.dtu.dk/service.php?NetMHCIIpan-3.2/>
+    Complex (MHC) molecule.
+    'NetMHCpan' can be used from a web server at 
+    <UPDATE LINK/>
     or from the command-line, using a local installation. This package
-    allows to call 'NetMHCIIpan' from R.
+    allows to call 'NetMHCpan' from R.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
