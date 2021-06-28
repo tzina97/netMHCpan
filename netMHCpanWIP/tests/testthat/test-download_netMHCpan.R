@@ -2,7 +2,7 @@ test_that("use", {
   if (!is_on_travis()) return()
   if (!is_url_valid()) return()
 
-  netMHCpan_tarfile_path <- tempfile(pattern = "netmhc2pan_")
+  netMHCpan_tarfile_path <- tempfile(pattern = "netMHCpan_")
 
   expect_silent(
     download_netMHCpan_bin(

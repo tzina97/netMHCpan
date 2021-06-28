@@ -15,6 +15,6 @@ get_default_netMHCpan_subfolder <- function( # nolint indeed a long function nam
     # netmhc2pan. sourcing this will then result in a 'cannot find
     # package netmhc2pan' error
     netMHCpan_folder_name,
-    paste0("netMHCIIpan-", netMHCpan_version)
+    paste0("netMHCpan-", netMHCpan_version)
   )
 }

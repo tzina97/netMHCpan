@@ -5,5 +5,5 @@
 #' @author Richèl J.C. Bilderbeek
 #' @export
 get_default_netMHCpan_version <- function() {
-  "3.2"
+  "4.1"
 }

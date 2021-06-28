@@ -4,6 +4,6 @@ test_that("use", {
       get_default_netMHCpan_folder(),
       get_netMHCpan_archive_filename()
     ),
-    get_default_neMHCpan_bin_tarfile_path()
+    get_default_netMHCpan_bin_tarfile_path()
   )
 })

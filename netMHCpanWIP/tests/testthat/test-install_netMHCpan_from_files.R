@@ -31,7 +31,7 @@ test_that("install NetMHCpan to a custom location", {
   }
   expect_true(file.exists(netMHCpan_data_tarfile_path))
 
-  netMHCpan_folder_name <- tempfile(pattern = "netmhc2pan_")
+  netMHCpan_folder_name <- tempfile(pattern = "netMHCpan_")
   expect_false(dir.exists(netMHCpan_folder_name))
 
   expect_silent(

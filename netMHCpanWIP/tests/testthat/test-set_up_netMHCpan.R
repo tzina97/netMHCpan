@@ -17,7 +17,7 @@ test_that("set_up_netMHCpan", {
   )
 
   # Minimal install
-  install_netMHCpan_bin(netmhc2pan_folder_name = netMHCpan_folder_name)
+  install_netMHCpan_bin(netMHCpan_folder_name = netMHCpan_folder_name)
   expect_silent(
     set_up_netMHCpan(netMHCpan_folder_name = netMHCpan_folder_name)
   )

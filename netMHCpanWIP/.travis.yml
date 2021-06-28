@@ -5,10 +5,10 @@ matrix:
   include:
   - r: release
     os: linux
-    env: INSTALL_NETMHC2PAN=true
+    env: INSTALL_NETMHCPAN=true
   - r: devel
     os: linux
-    env: INSTALL_NETMHC2PAN=false
+    env: INSTALL_NETMHCPAN=false
 
 r_packages:
   - devtools
@@ -24,28 +24,28 @@ before_script:
   # tcsh
   - sudo apt install tcsh
   - which tcsh
-  # NetMHCIIpan
-  - if [[ "$INSTALL_NETMHC2PAN" == true ]]; then ./scripts/install_netmhc2pan.sh; fi
+  # NetMHCpan
+  - if [[ "$INSTALL_NETMHCPAN" == true ]]; then ./scripts/install_netMHCpan.sh; fi
   # LAPACK
   - sudo apt-get install liblapack-dev -y
   # proselint
   - sudo pip install proselint
 
 after_success:
-  - if [[ "$INSTALL_NETMHC2PAN" == true ]]; then Rscript -e 'covr::codecov()'; fi
-  - if [[ "$INSTALL_NETMHC2PAN" == true ]]; then Rscript -e 'goodpractice::gp()'; fi
-  - if [[ "$INSTALL_NETMHC2PAN" == false ]]; then Rscript -e 'lintr::lint_package()'; fi
-  - if [[ "$INSTALL_NETMHC2PAN" == false ]]; then proselint *.md | egrep -v "typography\.symbols\.curly_quotes"; fi
+  - if [[ "$INSTALL_NETMHCPAN" == true ]]; then Rscript -e 'covr::codecov()'; fi
+  - if [[ "$INSTALL_NETMHCPAN" == true ]]; then Rscript -e 'goodpractice::gp()'; fi
+  - if [[ "$INSTALL_NETMHCPAN" == false ]]; then Rscript -e 'lintr::lint_package()'; fi
+  - if [[ "$INSTALL_NETMHCPAN" == false ]]; then proselint *.md | egrep -v "typography\.symbols\.curly_quotes"; fi
   - # No local files created
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then if [[ $(egrep -R "\"~" --include={*.R,*.Rmd}) ]]; then echo "Local file created"; exit 1; fi; fi
-  - Rscript -e 'netmhc2pan::netmhc2pan_report()'
+  - Rscript -e 'netMHCpan::netMHCpan_report()'
   - Rscript scripts/issue_3.R
   # Download thesis
   - wget https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf
 
 after_failure:
-  - Rscript -e 'remotes::install_github("richelbilderbeek/netmhc2pan")'
-  - Rscript -e 'netmhc2pan::netmhc2pan_report()'
+  - Rscript -e 'remotes::install_github("tzina97/netMHCpanW")'
+  - Rscript -e 'netMHCpan::netMHCpan_report()'
   - ls
   # Download thesis
   - wget https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf

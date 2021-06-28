@@ -36,7 +36,7 @@ test_that("abuse", {
   if (!is_url_valid()) return()
 
   netMHCpan_folder_name <- tempfile(
-    pattern = "netMHCpan_install_netmhc2pan_bin_"
+    pattern = "netMHCpan_install_netMHCpan_bin_"
   )
   expect_false(dir.exists(netMHCpan_folder_name))
 
