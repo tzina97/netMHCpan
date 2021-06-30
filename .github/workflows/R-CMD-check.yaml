@@ -11,8 +11,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - install_netmhc2pan: "true" 
-          - install_netmhc2pan: "false"
+          - install_netMHCpan: "true"
+          - install_netMHCpan: "false"
 
     runs-on: ubuntu-18.04
     env:
@@ -38,41 +38,41 @@ jobs:
           remotes::install_github("MangoTheCat/goodpractice")
         shell: Rscript {0}
 
-      - name: Show NETMHC2PAN
+      - name: Show NETMHCPAN
         env:
-          INSTALL_NETMHC2PAN: ${{ matrix.install_netmhc2pan }}
-        run: echo "$INSTALL_NETMHC2PAN"
+          INSTALL_NETMHCPAN: ${{ matrix.install_netMHCpan }}
+        run: echo "$INSTALL_NETMHCPAN"
 
-      - name: If statement on NETMHC2PAN is true
+      - name: If statement on NETMHCPAN is true
         env:
-          INSTALL_NETMHC2PAN: ${{ matrix.install_netmhc2pan }}
-        run: if [[ "$INSTALL_NETMHC2PAN" == true ]]; then echo "Yay!"; fi
+          INSTALL_NETMHCPAN: ${{ matrix.install_netmhc2pan }}
+        run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then echo "Yay!"; fi
 
       - name: Show location
         run: pwd
 
-      - name: If statement on NETMHC2PAN is false
+      - name: If statement on NETMHCPAN is false
         env:
-          INSTALL_NETMHC2PAN: ${{ matrix.install_netmhc2pan }}
-        run: if [[ "$INSTALL_NETMHC2PAN" == false ]]; then echo "Nay!"; fi
+          INSTALL_NETMHCPAN: ${{ matrix.install_netMHCpan }}
+        run: if [[ "$INSTALL_NETMHCPAN" == false ]]; then echo "Nay!"; fi
 
-      - name: Show NETMHC2PAN install script
+      - name: Show NETMHCPAN install script
         env:
-          INSTALL_NETMHC2PAN: ${{ matrix.install_netmhc2pan }}
-        run: if [[ "$INSTALL_NETMHC2PAN" == true ]]; then cat scripts/install_netmhc2pan.sh; fi
+          INSTALL_NETMHCPAN: ${{ matrix.install_netmhc2pan }}
+        run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then cat scripts/install_netMHCpan.sh; fi
 
-      - name: Install NETMHC2PAN
+      - name: Install NETMHCPAN
         env:
-          INSTALL_NETMHC2PAN: ${{ matrix.install_netmhc2pan }}
-        run: if [[ "$INSTALL_NETMHC2PAN" == true ]]; then ./scripts/install_netmhc2pan.sh; fi
+          INSTALL_NETMHCPAN: ${{ matrix.install_netMHCpan }}
+        run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then ./scripts/install_netMHCpan.sh; fi
 
       - name: Check
         run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
         shell: Rscript {0}
 
       - name: Test coverage
-        run: if [[ "$INSTALL_NETMHC2PAN" == true ]]; then Rscript -e 'covr::codecov()'; fi
+        run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then Rscript -e 'covr::codecov()'; fi
 
       - name: Lint
-        run: if [[ "$INSTALL_NETMHC2PAN" == false ]]; then Rscript -e 'lintr::lint_package()'; fi
+        run: if [[ "$INSTALL_NETMHCPAN" == false ]]; then Rscript -e 'lintr::lint_package()'; fi
 
