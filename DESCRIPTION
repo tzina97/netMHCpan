@@ -30,7 +30,7 @@ Imports:
 Suggests: 
     knitr,
     rmarkdown,
-    markdown
+    markdown,
     testthat,
     spelling
 VignetteBuilder: knitr
