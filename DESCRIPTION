@@ -38,4 +38,4 @@ RoxygenNote: 7.1.1
 Language: en-US
 URL: https://github.com/richelbilderbeek/netmhc2pan/
 BugReports: https://github.com/richelbilderbeek/netmhc2pan/issues
-SystemRequirements: NetMHC2pan (https://services.healthtech.dtu.dk/service.php?NetMHCIIpan-3.2)
+SystemRequirements: NetMHCpan (http://www.cbs.dtu.dk/services/NetMHCpan/)
