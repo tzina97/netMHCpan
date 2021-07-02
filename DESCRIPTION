@@ -11,7 +11,7 @@ Description: The field of immunology benefits from software that can
     binding strength of a short peptide to a Major Histocompatibility
     Complex (MHC) molecule.
     'NetMHCpan' can be used from a web server at 
-    <UPDATE LINK/>
+    <UPDATE LINK HERE/>
     or from the command-line, using a local installation. This package
     allows to call 'NetMHCpan' from R.
 License: GPL-3
