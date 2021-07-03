@@ -49,3 +49,4 @@ echo "NetMHCpan run:"
 Rscript -e 'netMHCpan::run_netMHCpan(fasta_filename = system.file("extdata", "example.fasta", package = "netMHCpan"))'
 
 
+
