@@ -1,5 +1,5 @@
 #' Measure if NetMHCpan is installed locally
-#' @inheritParams default_params_doci
+#' @inheritParams default_params_doc
 #' @return TRUE is NetMHCpan is installed locally,
 #'   FALSE otherwise
 #' @author Richèl J.C. Bilderbeek

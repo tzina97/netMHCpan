@@ -5,7 +5,7 @@
 \title{Download the NetMHCpan binary}
 \usage{
 download_netMHCpan_bin(
-  netMHCpan_bin_url = get_netmhc2pan_bin_url(),
+  netMHCpan_bin_url = get_netMHCpan_bin_url(),
   netMHCpan_bin_tarfile_path = get_default_netMHCpan_bin_tarfile_path(),
   verbose = FALSE,
   netMHCpan_archive_filename = get_netMHCpan_archive_filename(),

@@ -43,7 +43,7 @@ check_netMHCpan_installation <- function(
   if (!is_netMHCpan_data_installed(netMHCpan_folder_name)) {
     data_file_path <- file.path(
       netMHCpan_folder_name,
-      basename(get_default_netmhc2pan_subfolder()),
+      basename(get_default_netMHCpan_subfolder()),
       "data"
     )
     stop(
