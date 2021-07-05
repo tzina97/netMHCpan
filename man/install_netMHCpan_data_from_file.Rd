@@ -2,7 +2,7 @@
 % Please edit documentation in R/install_netmhc2pan_data_from_file.R
 \name{install_netMHCpan_data_from_file}
 \alias{install_netMHCpan_data_from_file}
-\title{Install the NetMHCIIpan data from file}
+\title{Install the NetMHCpan data from file}
 \usage{
 install_netMHCpan_data_from_file(
   netMHCpan_data_tarfile_path,
@@ -27,11 +27,11 @@ of the default NetMHCpan subfolder.}
 Nothing
 }
 \description{
-Install the NetMHCIIpan data from the NetMHCIIpan data tarball file
-to the default NetMHCIIpan folder.
+Install the NetMHCpan data from the NetMHCpan data tarball file
+to the default NetMHCpan folder.
 }
 \details{
-The NetMHCIIpan data tarball file can be in any path.
+The NetMHCpan data tarball file can be in any path.
 
 The data tarball file can be downloaded from
 \url{https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz},

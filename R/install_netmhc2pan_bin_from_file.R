@@ -1,4 +1,4 @@
-#' Install the NetMHCIIpan binary to a local folder
+#' Install the NetMHCpan binary to a local folder
 #' @inheritParams default_params_doc
 #' @return Nothing
 #' @author Richèl J.C. Bilderbeek

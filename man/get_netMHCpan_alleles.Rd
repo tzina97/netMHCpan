@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_netmhc2pan_alleles.R
 \name{get_netMHCpan_alleles}
 \alias{get_netMHCpan_alleles}
-\title{Get a list of the alleles supported by NetMHCIIpan}
+\title{Get a list of the alleles supported by NetMHCpan}
 \usage{
 get_netMHCpan_alleles(netMHCpan_folder_name = get_default_netMHCpan_folder())
 }
@@ -15,14 +15,14 @@ Use \link{get_default_netMHCpan_subfolder} to see the location
 of the default NetMHCpan subfolder.}
 }
 \value{
-a character vector with the NetMHCIIpan alleles
+a character vector with the NetMHCpan alleles
 }
 \description{
-Get a list of the alleles supported by NetMHCIIpan
+Get a list of the alleles supported by NetMHCpan
 }
 \examples{
-if (is_netmhc2pan_installed()) {
-  get_netmhc2pan_alleles()[1:5]
+if (is_netMHCpan_installed()) {
+  get_netMHCpan_alleles()[1:5]
 }
 }
 \author{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/run_netmhc2pan.R
 \name{run_netMHCpan}
 \alias{run_netMHCpan}
-\title{Run NetMHCIIpan}
+\title{Run NetMHCpan}
 \usage{
 run_netMHCpan(
   fasta_filename,
@@ -31,18 +31,18 @@ of the default NetMHCpan subfolder.}
 which will be deleted automatically}
 }
 \value{
-a data frame with the NetMHCIIpan results
+a data frame with the NetMHCpan results
 }
 \description{
-Run NetMHCIIpan
+Run NetMHCpan
 }
 \examples{
-if (is_netmhc2pan_installed()) {
+if (is_netMHCpan_installed()) {
 
   fasta_filename <- system.file(
-    "extdata", "example.fasta", package = "netmhc2pan"
+    "extdata", "example.fasta", package = "netMHCpan"
   )
-  run_netmhc2pan(fasta_filename)
+  run_netMHCpan(fasta_filename)
 
   # Two alleles
   alleles <- c("DRB1_0101", "DRB1_0102")

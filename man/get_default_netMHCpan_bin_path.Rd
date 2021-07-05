@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_default_netmhc2pan_bin_path.R
 \name{get_default_netMHCpan_bin_path}
 \alias{get_default_netMHCpan_bin_path}
-\title{Get the full path to the default NetMHC2pan binary}
+\title{Get the full path to the default NetMHCpan binary}
 \usage{
 get_default_netMHCpan_bin_path(
   netMHCpan_subfolder = get_default_netMHCpan_subfolder()
@@ -14,13 +14,13 @@ Use \link{get_default_netMHCpan_subfolder} to see the location
 of the default NetMHCpan subfolder}
 }
 \value{
-the full path to the default NetMHC2pan binary
+the full path to the default NetMHCpan binary
 }
 \description{
-Get the full path to the default NetMHC2pan binary
+Get the full path to the default NetMHCpan binary
 }
 \examples{
-get_default_netmhc2pan_bin_path()
+get_default_netMHCpan_bin_path()
 }
 \author{
 Richèl J.C. Bilderbeek

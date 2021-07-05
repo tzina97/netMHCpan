@@ -1,8 +1,8 @@
-#' Get the full path to the NetMHC2pan sub-folder
+#' Get the full path to the NetMHCpan sub-folder
 #' @inheritParams default_params_doc
-#' @return the full path to the NetMHC2pan sub-folder
+#' @return the full path to the NetMHCpan sub-folder
 #' @examples
-#' get_default_netmhc2pan_subfolder()
+#' get_default_netMHCpan_subfolder()
 #' @author Richèl J.C. Bilderbeek
 #' @export
 get_default_netMHCpan_subfolder <- function( # nolint indeed a long function name
@@ -12,8 +12,8 @@ get_default_netMHCpan_subfolder <- function( # nolint indeed a long function nam
   file.path(
     # Leave out the namespace in the next function:
     # The Travis build script sources this function before installing
-    # netmhc2pan. sourcing this will then result in a 'cannot find
-    # package netmhc2pan' error
+    # netMHCpan. sourcing this will then result in a 'cannot find
+    # package netMHCpan' error
     netMHCpan_folder_name,
     paste0("netMHCpan-", netMHCpan_version)
   )

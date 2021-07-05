@@ -1,9 +1,9 @@
-#' Get a list of the alleles supported by NetMHCIIpan
+#' Get a list of the alleles supported by NetMHCpan
 #' @inheritParams default_params_doc
-#' @return a character vector with the NetMHCIIpan alleles
+#' @return a character vector with the NetMHCpan alleles
 #' @examples
-#' if (is_netmhc2pan_installed()) {
-#'   get_netmhc2pan_alleles()[1:5]
+#' if (is_netMHCpan_installed()) {
+#'   get_netMHCpan_alleles()[1:5]
 #' }
 #' @author Richèl J.C. Bilderbeek
 #' @export

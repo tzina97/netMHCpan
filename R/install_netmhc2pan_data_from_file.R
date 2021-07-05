@@ -1,9 +1,9 @@
-#' Install the NetMHCIIpan data from file
+#' Install the NetMHCpan data from file
 #'
-#' Install the NetMHCIIpan data from the NetMHCIIpan data tarball file
-#' to the default NetMHCIIpan folder.
+#' Install the NetMHCpan data from the NetMHCpan data tarball file
+#' to the default NetMHCpan folder.
 #'
-#' The NetMHCIIpan data tarball file can be in any path.
+#' The NetMHCpan data tarball file can be in any path.
 #'
 #' The data tarball file can be downloaded from
 #' \url{https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz},
@@ -29,7 +29,7 @@ install_netMHCpan_data_from_file <- function( # nolint long function name indeed
 
   local_path <- file.path(
     netMHCpan_folder_name,
-    basename(get_default_netmhc2pan_subfolder()),
+    basename(get_default_netMHCpan_subfolder()),
     "data.Linux.tar.gz"
   )
 
@@ -42,7 +42,7 @@ install_netMHCpan_data_from_file <- function( # nolint long function name indeed
     exdir = path.expand(
       file.path(
         netMHCpan_folder_name,
-        basename(get_default_netmhc2pan_subfolder())
+        basename(get_default_netMHCpan_subfolder())
       )
     )
   )

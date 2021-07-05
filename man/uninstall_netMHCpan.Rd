@@ -2,7 +2,7 @@
 % Please edit documentation in R/uninstall_netmhc2pan.R
 \name{uninstall_netMHCpan}
 \alias{uninstall_netMHCpan}
-\title{Uninstall NetMHCIIpan}
+\title{Uninstall NetMHCpan}
 \usage{
 uninstall_netMHCpan(netMHCpan_folder_name = get_default_netMHCpan_folder())
 }
@@ -15,7 +15,7 @@ Use \link{get_default_netMHCpan_subfolder} to see the location
 of the default NetMHCpan subfolder.}
 }
 \description{
-Uninstall NetMHCIIpan
+Uninstall NetMHCpan
 }
 \author{
 Richèl J.C. Bilderbeek

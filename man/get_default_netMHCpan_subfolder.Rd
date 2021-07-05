@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_default_netmhc2pan_subfolder.R
 \name{get_default_netMHCpan_subfolder}
 \alias{get_default_netMHCpan_subfolder}
-\title{Get the full path to the NetMHC2pan sub-folder}
+\title{Get the full path to the NetMHCpan sub-folder}
 \usage{
 get_default_netMHCpan_subfolder(
   netMHCpan_folder_name = get_default_netMHCpan_folder(),
@@ -18,18 +18,18 @@ Use \link{get_default_netMHCpan_subfolder} to see the location
 of the default NetMHCpan subfolder.}
 
 \item{netMHCpan_version}{the NetMHCpan version,
-for example \code{3.2}.
+for example \code{4.1}.
 Use \link{get_default_netMHCpan_version} to get the default
 NetMHCpan version}
 }
 \value{
-the full path to the NetMHC2pan sub-folder
+the full path to the NetMHCpan sub-folder
 }
 \description{
-Get the full path to the NetMHC2pan sub-folder
+Get the full path to the NetMHCpan sub-folder
 }
 \examples{
-get_default_netmhc2pan_subfolder()
+get_default_netMHCpan_subfolder()
 }
 \author{
 Richèl J.C. Bilderbeek

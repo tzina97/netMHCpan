@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_default_netmhc2pan_bin_tarfile_path.R
 \name{get_default_netMHCpan_bin_tarfile_path}
 \alias{get_default_netMHCpan_bin_tarfile_path}
-\title{Get the default path for the NetMHCIIpan binary tarball file}
+\title{Get the default path for the NetMHCpan binary tarball file}
 \usage{
 get_default_netMHCpan_bin_tarfile_path(
   netMHCpan_folder_name = get_default_netMHCpan_folder(),
@@ -23,11 +23,11 @@ which is used in installation of NetMHCpan.
 Use \link{get_netMHCpan_archive_filename} to get this filename.}
 }
 \description{
-Get the default path for the NetMHCIIpan binary tarball file.
+Get the default path for the NetMHCpan binary tarball file.
 This is the location where it will be saved to after downloading.
 }
 \examples{
-get_default_netmhc2pan_bin_tarfile_path()
+get_default_netMHCpan_bin_tarfile_path()
 }
 \author{
 Richèl J.C. Bilderbeek

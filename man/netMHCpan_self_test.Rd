@@ -2,7 +2,7 @@
 % Please edit documentation in R/netmhc2pan_self_test.R
 \name{netMHCpan_self_test}
 \alias{netMHCpan_self_test}
-\title{Test NetMHCIIpan}
+\title{Test NetMHCpan}
 \usage{
 netMHCpan_self_test(
   netMHCpan_folder_name = get_default_netMHCpan_folder(),
@@ -20,7 +20,7 @@ of the default NetMHCpan subfolder.}
 \item{verbose}{set to TRUE for more output}
 }
 \description{
-Test NetMHCIIpan
+Test NetMHCpan
 }
 \author{
 Richèl J.C. Bilderbeek

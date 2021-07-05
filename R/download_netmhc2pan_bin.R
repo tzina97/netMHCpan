@@ -1,6 +1,6 @@
-#' Download the NetMHCIIpan binary
+#' Download the NetMHCpan binary
 #'
-#' Download the NetMHCIIpan binary tarball file
+#' Download the NetMHCpan binary tarball file
 #' @inheritParams default_params_doc
 #' @return Nothing
 #' @examples
@@ -27,7 +27,7 @@ download_netMHCpan_bin <- function(
 
   if (verbose) {
     message(
-      "Downloading NetMHCIIpan from ", netMHCpan_bin_url,
+      "Downloading NetMHCpan from ", netMHCpan_bin_url,
       " (full URL is ", url, ") to ", netMHCpan_bin_tarfile_path
     )
   }

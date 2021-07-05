@@ -2,7 +2,7 @@
 % Please edit documentation in R/set_up_netmhc2pan.R
 \name{set_up_netMHCpan}
 \alias{set_up_netMHCpan}
-\title{Install the NetMHCIIpan binary to a local folder}
+\title{Install the NetMHCpan binary to a local folder}
 \usage{
 set_up_netMHCpan(
   netMHCpan_folder_name = get_default_netMHCpan_folder(),
@@ -23,11 +23,11 @@ of the default NetMHCpan subfolder.}
 Nothing
 }
 \description{
-Install the NetMHCIIpan binary to a local folder
+Install the NetMHCpan binary to a local folder
 }
 \examples{
 \donttest{
-  set_up_netmhc2pan()
+  set_up_netMHCpan()
 }
 }
 \author{

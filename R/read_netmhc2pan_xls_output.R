@@ -1,6 +1,6 @@
-#' Read MHC2pan output
+#' Read MHCpan output
 #'
-#' Read the output produced by MHC2pan,
+#' Read the output produced by MHCpan,
 #' which is an \code{XLS} file by default.
 #' @inheritParams default_params_doc
 #' @export

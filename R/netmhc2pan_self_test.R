@@ -1,4 +1,4 @@
-#' Test NetMHCIIpan
+#' Test NetMHCpan
 #' @inheritParams default_params_doc
 #' @author Richèl J.C. Bilderbeek
 #' @export

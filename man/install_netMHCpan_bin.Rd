@@ -2,14 +2,14 @@
 % Please edit documentation in R/install_netmhc2pan_bin.R
 \name{install_netMHCpan_bin}
 \alias{install_netMHCpan_bin}
-\title{Install the NetMHCIIpan binary to a local folder}
+\title{Install the NetMHCpan binary to a local folder}
 \usage{
 install_netMHCpan_bin(
   netMHCpan_bin_url = get_netMHCpan_bin_url(),
   verbose = FALSE,
   netMHCpan_archive_filename = get_netMHCpan_archive_filename(),
   netMHCpan_folder_name = get_default_netMHCpan_folder(),
-  temp_local_file = tempfile(pattern = "netMHCpan_install_netmhc2pan_bin_")
+  temp_local_file = tempfile(pattern = "netMHCpan_install_netMHCpan_bin_")
 )
 }
 \arguments{
@@ -40,11 +40,11 @@ This file will be deleted afterwards.}
 Nothing
 }
 \description{
-Install the NetMHCIIpan binary to a local folder.
+Install the NetMHCpan binary to a local folder.
 }
 \examples{
 \donttest{
-  install_netmhc2pan_bin()
+  install_netMHCpan_bin()
 }
 }
 \author{

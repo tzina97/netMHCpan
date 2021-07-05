@@ -2,7 +2,7 @@
 % Please edit documentation in R/to_netmhc2pan_name.R
 \name{to_netMHCpan_name}
 \alias{to_netMHCpan_name}
-\title{Convert a formal haplotype name to its NetMHC2pan notation}
+\title{Convert a formal haplotype name to its NetMHCpan notation}
 \usage{
 to_netMHCpan_name(mhc_haplotype)
 }
@@ -11,5 +11,5 @@ to_netMHCpan_name(mhc_haplotype)
 See \link{get_netMHCpan_alleles} for a full list}
 }
 \description{
-Convert a formal MHC-II haplotype name to the notation used by NetMHC2pan.
+Convert a formal MHC haplotype name to the notation used by NetMHCpan.
 }

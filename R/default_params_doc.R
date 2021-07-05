@@ -37,11 +37,11 @@
 #'   Use \link{get_default_netMHCpan_subfolder} to see the location
 #'   of the default NetMHCpan subfolder
 #' @param netMHCpan_version the NetMHCpan version,
-#'   for example \code{3.2}.
+#'   for example \code{4.1}.
 #'   Use \link{get_default_netMHCpan_version} to get the default
 #'   NetMHCpan version
 #' @param os the operating system as obtained by \code{rappdirs::app_dir()$os}.
-#'   \code{netmhc2pan} supports Linux ('\code{unix}') only
+#'   \code{netMHCpan} supports Linux ('\code{unix}') only
 #' @param peptide_length length of a peptide
 #' @param peptides one or more peptide sequences
 #' @param protein_sequence a protein sequence, for example \code{FAMILYVW}

@@ -1,13 +1,13 @@
-#' Checks the installation of NetMHCIIpan.
+#' Checks the installation of NetMHCpan.
 #'
-#' Checks the installation of NetMHCIIpan.
+#' Checks the installation of NetMHCpan.
 #' Throws a helpful error message if incomplete,
 #' else does nothing
 #' @inheritParams default_params_doc
 #' @return Nothing
 #' @examples
-#' # Will stop if NetMHC2pan is not installed
-#' try(check_netmhc2pan_installation())
+#' # Will stop if NetMHCpan is not installed
+#' try(check_netMHCpan_installation())
 #' @author Richèl J.C. Bilderbeek
 #' @export
 check_netMHCpan_installation <- function(
@@ -19,7 +19,7 @@ check_netMHCpan_installation <- function(
     bin_file_path <- file.path(
       netMHCpan_folder_name,
       basename(get_default_netMHCpan_subfolder()),
-      basename(get_default_netMHC2pan_bin_path())
+      basename(get_default_netMHCpan_bin_path())
     )
     netMHCpan_version <- stringr::str_match(
       bin_file_path,

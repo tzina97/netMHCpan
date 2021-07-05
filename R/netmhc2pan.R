@@ -1,13 +1,13 @@
-#' netmhc2pan: predict peptide binding strengths using NetMHC2pan
+#' netMHCpan: predict peptide binding strengths using NetMHCpan
 #'
-#' 'NetMHCIIpan' is a tool to predict the
+#' 'NetMHCpan' is a tool to predict the
 #' binding strength of a short peptide to an MHC-II complex.
-#' 'NetMHCIIpan' can be used from a web server at
-#' 'https://services.healthtech.dtu.dk/service.php?NetMHCIIpan-3.2'
+#' 'NetMHCpan' can be used from a web server at
+#' 'http://www.cbs.dtu.dk/services/NetMHCpan/'
 #' or from the command-line, using a local installation. This package
-#' allows to call 'NetMHCIIpan' from R.
+#' allows to call 'NetMHCpan' from R.
 #' @examples
-#' if (is_netmhc2pan_installed()) {
+#' if (is_netMHCpan_installed()) {
 #'
 #'   predict_ic50(
 #'     peptides = c("AIAACAMLLV", "ALVCYIVMPV"),
@@ -16,5 +16,5 @@
 #' }
 #' @author Richèl J.C. Bilderbeek
 #' @docType package
-#' @name netmhc2pan
+#' @name netMHCpan
 NULL

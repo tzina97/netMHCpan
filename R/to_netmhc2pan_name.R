@@ -1,6 +1,6 @@
-#' Convert a formal haplotype name to its NetMHC2pan notation
+#' Convert a formal haplotype name to its NetMHCpan notation
 #'
-#' Convert a formal MHC-II haplotype name to the notation used by NetMHC2pan.
+#' Convert a formal MHC haplotype name to the notation used by NetMHCpan.
 #' @inheritParams default_params_doc
 #' @export
 to_netMHCpan_name <- function(mhc_haplotype) {

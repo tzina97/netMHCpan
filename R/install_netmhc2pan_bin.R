@@ -1,11 +1,11 @@
-#' Install the NetMHCIIpan binary to a local folder
+#' Install the NetMHCpan binary to a local folder
 #'
-#' Install the NetMHCIIpan binary to a local folder.
+#' Install the NetMHCpan binary to a local folder.
 #' @inheritParams default_params_doc
 #' @return Nothing
 #' @examples
 #' \donttest{
-#'   install_netmhc2pan_bin()
+#'   install_netMHCpan_bin()
 #' }
 #' @author Richèl J.C. Bilderbeek
 #' @export
@@ -14,7 +14,7 @@ install_netMHCpan_bin <- function(
   verbose = FALSE,
   netMHCpan_archive_filename = get_netMHCpan_archive_filename(),
   netMHCpan_folder_name = get_default_netMHCpan_folder(),
-  temp_local_file = tempfile(pattern = "netMHCpan_install_netmhc2pan_bin_")
+  temp_local_file = tempfile(pattern = "netMHCpan_install_netMHCpan_bin_")
 ) {
   bin_path <- file.path(
     netMHCpan_folder_name,

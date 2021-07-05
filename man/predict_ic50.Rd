@@ -44,12 +44,12 @@ Each peptide must be 15 amino acids at
 most (use \link{predict_ic50s} to predict the IC50s for longer peptides)
 }
 \note{
-this function uses a temporary file, because NetMHC2pan reads its
+this function uses a temporary file, because NetMHCpan reads its
 input from file. This temporary file is deleted after this function
 passed successfully.
 }
 \examples{
-if (is_netmhc2pan_installed()) {
+if (is_netMHCpan_installed()) {
 
   predict_ic50(
     peptides = c("AIAACAMLLV", "ALVCYIVMPV"),

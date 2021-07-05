@@ -2,7 +2,7 @@
 % Please edit documentation in R/download_netmhc2pan_bin.R
 \name{download_netMHCpan_bin}
 \alias{download_netMHCpan_bin}
-\title{Download the NetMHCIIpan binary}
+\title{Download the NetMHCpan binary}
 \usage{
 download_netMHCpan_bin(
   netMHCpan_bin_url = get_netmhc2pan_bin_url(),
@@ -37,7 +37,7 @@ This file will be deleted afterwards.}
 Nothing
 }
 \description{
-Download the NetMHCIIpan binary tarball file
+Download the NetMHCpan binary tarball file
 }
 \examples{
 \donttest{

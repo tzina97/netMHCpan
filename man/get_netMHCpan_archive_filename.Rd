@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_netmhc2pan_archive_filename.R
 \name{get_netMHCpan_archive_filename}
 \alias{get_netMHCpan_archive_filename}
-\title{Get the filename of the NetMHC2pan archive file}
+\title{Get the filename of the NetMHCpan archive file}
 \usage{
 get_netMHCpan_archive_filename(
   netMHCpan_version = get_default_netMHCpan_version()
@@ -10,16 +10,16 @@ get_netMHCpan_archive_filename(
 }
 \arguments{
 \item{netMHCpan_version}{the NetMHCpan version,
-for example \code{3.2}.
+for example \code{4.1}.
 Use \link{get_default_netMHCpan_version} to get the default
 NetMHCpan version}
 }
 \value{
-the filename of the NetMHC2pan archive file
+the filename of the NetMHCpan archive file
 }
 \description{
-Get the filename of the NetMHC2pan archive file
+Get the filename of the NetMHCpan archive file
 }
 \examples{
-get_netmhc2pan_archive_filename()
+get_netMHCpan_archive_filename()
 }

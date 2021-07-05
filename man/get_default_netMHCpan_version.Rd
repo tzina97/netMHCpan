@@ -2,18 +2,18 @@
 % Please edit documentation in R/get_default_netmhc2pan_version.R
 \name{get_default_netMHCpan_version}
 \alias{get_default_netMHCpan_version}
-\title{Get the default NetMHC2pan version used}
+\title{Get the default NetMHCpan version used}
 \usage{
 get_default_netMHCpan_version()
 }
 \value{
-the default NetMHC2pan version used
+the default NetMHCpan version used
 }
 \description{
-Get the default NetMHC2pan version used
+Get the default NetMHCpan version used
 }
 \examples{
-get_default_netmhc2pan_version()
+get_default_netMHCpan_version()
 }
 \author{
 Richèl J.C. Bilderbeek

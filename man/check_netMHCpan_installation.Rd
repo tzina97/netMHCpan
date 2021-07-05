@@ -2,7 +2,7 @@
 % Please edit documentation in R/check_netmhc2pan_installation.R
 \name{check_netMHCpan_installation}
 \alias{check_netMHCpan_installation}
-\title{Checks the installation of NetMHCIIpan.}
+\title{Checks the installation of NetMHCpan.}
 \usage{
 check_netMHCpan_installation(
   netMHCpan_folder_name = get_default_netMHCpan_folder()
@@ -20,13 +20,13 @@ of the default NetMHCpan subfolder.}
 Nothing
 }
 \description{
-Checks the installation of NetMHCIIpan.
+Checks the installation of NetMHCpan.
 Throws a helpful error message if incomplete,
 else does nothing
 }
 \examples{
-# Will stop if NetMHC2pan is not installed
-try(check_netmhc2pan_installation())
+# Will stop if NetMHCpan is not installed
+try(check_netMHCpan_installation())
 }
 \author{
 Richèl J.C. Bilderbeek

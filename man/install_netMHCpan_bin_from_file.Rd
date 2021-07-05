@@ -2,7 +2,7 @@
 % Please edit documentation in R/install_netmhc2pan_bin_from_file.R
 \name{install_netMHCpan_bin_from_file}
 \alias{install_netMHCpan_bin_from_file}
-\title{Install the NetMHCIIpan binary to a local folder}
+\title{Install the NetMHCpan binary to a local folder}
 \usage{
 install_netMHCpan_bin_from_file(
   netMHCpan_bin_tarfile_path,
@@ -34,7 +34,7 @@ of the default NetMHCpan subfolder.}
 Nothing
 }
 \description{
-Install the NetMHCIIpan binary to a local folder
+Install the NetMHCpan binary to a local folder
 }
 \author{
 Richèl J.C. Bilderbeek

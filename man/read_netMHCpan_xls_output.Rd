@@ -2,7 +2,7 @@
 % Please edit documentation in R/read_netmhc2pan_xls_output.R
 \name{read_netMHCpan_xls_output}
 \alias{read_netMHCpan_xls_output}
-\title{Read MHC2pan output}
+\title{Read MHCpan output}
 \usage{
 read_netMHCpan_xls_output(xls_filename)
 }
@@ -10,6 +10,6 @@ read_netMHCpan_xls_output(xls_filename)
 \item{xls_filename}{name of an \code{xls} file}
 }
 \description{
-Read the output produced by MHC2pan,
+Read the output produced by MHCpan,
 which is an \code{XLS} file by default.
 }

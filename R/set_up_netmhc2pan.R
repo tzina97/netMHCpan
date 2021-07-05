@@ -1,9 +1,9 @@
-#' Install the NetMHCIIpan binary to a local folder
+#' Install the NetMHCpan binary to a local folder
 #' @inheritParams default_params_doc
 #' @return Nothing
 #' @examples
 #' \donttest{
-#'   set_up_netmhc2pan()
+#'   set_up_netMHCpan()
 #' }
 #' @author Richèl J.C. Bilderbeek
 #' @export
