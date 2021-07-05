@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_netmhc2pan_bin_url.R
 \name{get_netMHCpan_bin_url}
 \alias{get_netMHCpan_bin_url}
-\title{Get the NetMHCIIpan binary download URL.}
+\title{Get the NetMHCpan binary download URL.}
 \usage{
 get_netMHCpan_bin_url()
 }
@@ -10,12 +10,12 @@ get_netMHCpan_bin_url()
 a download URL
 }
 \description{
-Get the URL for the NetMHCIIpan binary, as is emailed.
+Get the URL for the NetMHCpan binary, as is emailed.
 These expire after 4 hours.
 }
 \seealso{
 Use \link{is_url_valid} to determine if the download URL is still valid.
-Use \link{check_netmhc2pan_bin_url} to get a helpful error message if this
+Use \link{check_netMHCpan_bin_url} to get a helpful error message if this
 URL is invalid.
 }
 \author{

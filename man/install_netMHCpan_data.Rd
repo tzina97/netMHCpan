@@ -2,7 +2,7 @@
 % Please edit documentation in R/install_netmhc2pan_data.R
 \name{install_netMHCpan_data}
 \alias{install_netMHCpan_data}
-\title{Install the NetMHCIIpan data to a local folder}
+\title{Install the NetMHCpan data to a local folder}
 \usage{
 install_netMHCpan_data(
   netMHCpan_data_url = get_netMHCpan_data_url(),
@@ -30,16 +30,16 @@ of the default NetMHCpan subfolder.}
 Nothing
 }
 \description{
-Install the NetMHCIIpan data to a local folder.
+Install the NetMHCpan data to a local folder.
 }
 \details{
 This data can be downloaded from
-\url{https://www.cbs.dtu.dk/services/NetMHCIIpan-3.2/data.Linux.tar.gz},
+\url{https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz},
 without filling in a contact form.
 }
 \examples{
 \donttest{
-  install_netmhc2pan_data()
+  install_netMHCpan_data()
 }
 }
 \author{

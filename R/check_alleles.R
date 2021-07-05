@@ -2,7 +2,7 @@
 #'
 #' Check if the alleles have a valid NetMHC2pan name.
 #' Will \link{stop} if not.
-#' @seealso Use \link{to_netNHCpan_name} to convert
+#' @seealso Use \link{to_netMHCpan_name} to convert
 #' a formal name to an NetMHCpan name.
 #' Use \link{get_netMHCpan_alleles} for a list
 #' of all supported alleles (in NetMHCpan naming format).

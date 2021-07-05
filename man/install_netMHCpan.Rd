@@ -2,7 +2,7 @@
 % Please edit documentation in R/install_netmhc2pan.R
 \name{install_netMHCpan}
 \alias{install_netMHCpan}
-\title{Install NetMHCIIpan}
+\title{Install NetMHCpan}
 \usage{
 install_netMHCpan(
   netMHCpan_bin_url = get_netMHCpan_bin_url(),
@@ -47,22 +47,22 @@ This file will be deleted afterwards.}
 Nothing
 }
 \description{
-Install NetMHCIIpan to a local folder, by downloading the binary and
-data files. Use \link{install_netmhc2pan_from_files} to install
-NetMHCIIpan from files that are already downloaded.
+Install NetMHCpan to a local folder, by downloading the binary and
+data files. Use \link{install_netMHCpan_from_files} to install
+NetMHCpan from files that are already downloaded.
 }
 \details{
 These are three steps:
 
 \itemize{
-  \item Install the NetMHCIIpan binary, using \link{install_netmhc2pan_bin}
-  \item Install the NetMHCIIpan data, using \link{install_netmhc2pan_data}
-  \item Set up NetMHCIIpan, using \link{set_up_netmhc2pan}
+  \item Install the NetMHCpan binary, using \link{install_netMHCpan_bin}
+  \item Install the NetMHCpan data, using \link{install_netMHCpan_data}
+  \item Set up NetMHCpan, using \link{set_up_netMHCpan}
 }
 }
 \examples{
 \donttest{
-  install_netmhc2pan()
+  install_netMHCpan()
 }
 }
 \author{

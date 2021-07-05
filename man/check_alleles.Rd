@@ -31,7 +31,7 @@ if (is_netMHCpan_installed()) {
 }
 }
 \seealso{
-Use \link{to_netNHCpan_name} to convert
+Use \link{to_netMHCpan_name} to convert
 a formal name to an NetMHCpan name.
 Use \link{get_netMHCpan_alleles} for a list
 of all supported alleles (in NetMHCpan naming format).

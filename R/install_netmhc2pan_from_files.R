@@ -1,18 +1,18 @@
-#' Install NetMHCIIpan from files.
+#' Install NetMHCpan from files.
 #'
-#' Install NetMHCIIpan to a local folder from (already downloaded)
+#' Install NetMHCpan to a local folder from (already downloaded)
 #' binary and date tarball files.
-#' Use \link{install_netmhc2pan} to install
-#' NetMHCIIpan by downloading these files
+#' Use \link{install_netMHCpan} to install
+#' NetMHCpan by downloading these files
 #'
 #' These are three steps:
 #'
 #' \itemize{
-#'   \item Install the NetMHCIIpan binary,
-#'     using \link{install_netmhc2pan_bin_from_file}
-#'   \item Install the NetMHCIIpan data,
-#'     using \link{install_netmhc2pan_data_from_file}
-#'   \item Set up NetMHCIIpan, using \link{set_up_netmhc2pan}
+#'   \item Install the NetMHCpan binary,
+#'     using \link{install_netMHCpan_bin_from_file}
+#'   \item Install the NetMHCpan data,
+#'     using \link{install_netMHCpan_data_from_file}
+#'   \item Set up NetMHCpan, using \link{set_up_netMHCpan}
 #' }
 #' @inheritParams default_params_doc
 #' @return Nothing

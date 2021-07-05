@@ -2,7 +2,7 @@
 % Please edit documentation in R/check_netmhc2pan_bin_url.R
 \name{check_netMHCpan_bin_url}
 \alias{check_netMHCpan_bin_url}
-\title{Check the URL of the NetMHCIIpan binary tarball}
+\title{Check the URL of the NetMHCpan binary tarball}
 \usage{
 check_netMHCpan_bin_url(
   netMHCpan_bin_url = get_netMHCpan_bin_url(),
@@ -29,7 +29,7 @@ Use \link{get_netMHCpan_archive_filename} to get this filename.}
 This file will be deleted afterwards.}
 }
 \description{
-Check the URL of the NetMHCIIpan binary tarball is valid,
+Check the URL of the NetMHCpan binary tarball is valid,
 will stop if not.
 This URL link expires after 4 hours.
 }

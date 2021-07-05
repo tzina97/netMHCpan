@@ -1,21 +1,21 @@
-#' Install NetMHCIIpan
+#' Install NetMHCpan
 #'
-#' Install NetMHCIIpan to a local folder, by downloading the binary and
-#' data files. Use \link{install_netmhc2pan_from_files} to install
-#' NetMHCIIpan from files that are already downloaded.
+#' Install NetMHCpan to a local folder, by downloading the binary and
+#' data files. Use \link{install_netMHCpan_from_files} to install
+#' NetMHCpan from files that are already downloaded.
 #'
 #' These are three steps:
 #'
 #' \itemize{
-#'   \item Install the NetMHCIIpan binary, using \link{install_netmhc2pan_bin}
-#'   \item Install the NetMHCIIpan data, using \link{install_netmhc2pan_data}
-#'   \item Set up NetMHCIIpan, using \link{set_up_netmhc2pan}
+#'   \item Install the NetMHCpan binary, using \link{install_netMHCpan_bin}
+#'   \item Install the NetMHCpan data, using \link{install_netMHCpan_data}
+#'   \item Set up NetMHCpan, using \link{set_up_netMHCpan}
 #' }
 #' @inheritParams default_params_doc
 #' @return Nothing
 #' @examples
 #' \donttest{
-#'   install_netmhc2pan()
+#'   install_netMHCpan()
 #' }
 #' @author Richèl J.C. Bilderbeek
 #' @export
@@ -42,7 +42,7 @@ install_netMHCpan <- function(
   is_data_installed <- netMHCpan::is_netMHCpan_data_installed(
     netMHCpan_folder_name
   )
-  if (!is_data_installed) { # nolint netmhc2pan function
+  if (!is_data_installed) { # nolint netMHCpan function
     netMHCpan::install_netMHCpan_data(
       netMHCpan_folder_name = netMHCpan_folder_name,
       verbose = verbose

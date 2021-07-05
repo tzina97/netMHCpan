@@ -1,15 +1,15 @@
-#' Install the NetMHCIIpan data to a local folder
+#' Install the NetMHCpan data to a local folder
 #'
-#' Install the NetMHCIIpan data to a local folder.
+#' Install the NetMHCpan data to a local folder.
 #'
 #' This data can be downloaded from
-#' \url{https://www.cbs.dtu.dk/services/NetMHCIIpan-3.2/data.Linux.tar.gz},
+#' \url{https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz},
 #' without filling in a contact form.
 #' @inheritParams default_params_doc
 #' @return Nothing
 #' @examples
 #' \donttest{
-#'   install_netmhc2pan_data()
+#'   install_netMHCpan_data()
 #' }
 #' @author Richèl J.C. Bilderbeek
 #' @export

@@ -1,4 +1,4 @@
-#' Deprecated, use \link{get_netmhc2pan_bin_url} instead
+#' Deprecated, use \link{get_netMHCpan_bin_url} instead
 #' @return a download URL
 #' @author Richèl J.C. Bilderbeek
 #' @export

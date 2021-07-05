@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_netmhc2pan_url.R
 \name{get_netMHCpan_url}
 \alias{get_netMHCpan_url}
-\title{Deprecated, use \link{get_netmhc2pan_bin_url} instead}
+\title{Deprecated, use \link{get_netMHCpan_bin_url} instead}
 \usage{
 get_netMHCpan_url()
 }
@@ -10,7 +10,7 @@ get_netMHCpan_url()
 a download URL
 }
 \description{
-Deprecated, use \link{get_netmhc2pan_bin_url} instead
+Deprecated, use \link{get_netMHCpan_bin_url} instead
 }
 \author{
 Richèl J.C. Bilderbeek

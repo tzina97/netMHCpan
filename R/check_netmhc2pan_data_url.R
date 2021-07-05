@@ -1,6 +1,6 @@
-#' Check the URL of the NetMHCIIpan binary tarball
+#' Check the URL of the NetMHCpan binary tarball
 #'
-#' Check the URL of the NetMHCIIpan binary tarball is valid,
+#' Check the URL of the NetMHCpan binary tarball is valid,
 #' will stop if not.
 #' This URL link expires after 4 hours.
 #' @inheritParams default_params_doc
