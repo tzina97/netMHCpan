@@ -15,3 +15,4 @@ cd build
 R CMD build .
 R CMD check --as-cran $(ls *.tar.gz)
 
+
