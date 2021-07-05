@@ -9,16 +9,6 @@ is_netMHCpan_installed(
   verbose = FALSE
 )
 }
-\arguments{
-\item{netMHCpan_folder_name}{the folder (to be) used by NetMHCpan.
-From this location, a subfolder for NetMHCpan is created.
-Use \link{get_default_netMHCpan_folder} to see the location
-of the default NetMHCpan folder.
-Use \link{get_default_netMHCpan_subfolder} to see the location
-of the default NetMHCpan subfolder.}
-
-\item{verbose}{set to TRUE for more output}
-}
 \value{
 TRUE is NetMHCIIpan is installed locally,
   FALSE otherwise
