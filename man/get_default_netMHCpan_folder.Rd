@@ -3,20 +3,20 @@
 \name{get_default_netMHCpan_folder}
 \alias{get_default_netMHCpan_folder}
 \title{Get the path to the folder where this package installs
-NetMHCIIpan by default}
+NetMHCpan by default}
 \usage{
 get_default_netMHCpan_folder()
 }
 \value{
 the path to the folder where this package installs
-  NetMHCIIpan by default
+  NetMHCpan by default
 }
 \description{
 Get the path to the folder where this package installs
-NetMHCIIpan by default
+NetMHCpan by default
 }
 \examples{
-get_default_netmhc2pan_folder()
+get_default_netMHCpan_folder()
 }
 \author{
 Richèl J.C. Bilderbeek

@@ -2,7 +2,7 @@
 % Please edit documentation in R/is_netmhc2pan_installed.R
 \name{is_netMHCpan_set_up}
 \alias{is_netMHCpan_set_up}
-\title{Measure if NetMHCIIpan is set up}
+\title{Measure if NetMHCpan is set up}
 \usage{
 is_netMHCpan_set_up(netMHCpan_folder_name = get_default_netMHCpan_folder())
 }
@@ -15,11 +15,11 @@ Use \link{get_default_netMHCpan_subfolder} to see the location
 of the default NetMHCpan subfolder.}
 }
 \value{
-TRUE is NetMHCIIpan is set up locally,
+TRUE is NetMHCpan is set up locally,
   FALSE otherwise
 }
 \description{
-Measure if NetMHCIIpan is set up
+Measure if NetMHCpan is set up
 }
 \author{
 Richèl J.C. Bilderbeek

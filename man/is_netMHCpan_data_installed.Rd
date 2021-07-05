@@ -2,7 +2,7 @@
 % Please edit documentation in R/is_netmhc2pan_installed.R
 \name{is_netMHCpan_data_installed}
 \alias{is_netMHCpan_data_installed}
-\title{Measure if NetMHCIIpan data folder is installed locally}
+\title{Measure if NetMHCpan data folder is installed locally}
 \usage{
 is_netMHCpan_data_installed(
   netMHCpan_folder_name = get_default_netMHCpan_folder()
@@ -17,11 +17,11 @@ Use \link{get_default_netMHCpan_subfolder} to see the location
 of the default NetMHCpan subfolder.}
 }
 \value{
-TRUE is NetMHCIIpan data folder is installed locally,
+TRUE is NetMHCpan data folder is installed locally,
   FALSE otherwise
 }
 \description{
-Measure if NetMHCIIpan data folder is installed locally
+Measure if NetMHCpan data folder is installed locally
 }
 \author{
 Richèl J.C. Bilderbeek

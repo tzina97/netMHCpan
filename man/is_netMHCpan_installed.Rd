@@ -2,7 +2,7 @@
 % Please edit documentation in R/is_netmhc2pan_installed.R
 \name{is_netMHCpan_installed}
 \alias{is_netMHCpan_installed}
-\title{Measure if NetMHCIIpan is installed locally}
+\title{Measure if NetMHCpan is installed locally}
 \usage{
 is_netMHCpan_installed(
   netMHCpan_folder_name = get_default_netMHCpan_folder(),
@@ -10,11 +10,11 @@ is_netMHCpan_installed(
 )
 }
 \value{
-TRUE is NetMHCIIpan is installed locally,
+TRUE is NetMHCpan is installed locally,
   FALSE otherwise
 }
 \description{
-Measure if NetMHCIIpan is installed locally
+Measure if NetMHCpan is installed locally
 }
 \author{
 Richèl J.C. Bilderbeek

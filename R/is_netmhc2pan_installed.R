@@ -1,6 +1,6 @@
-#' Measure if NetMHCIIpan is installed locally
+#' Measure if NetMHCpan is installed locally
 #' @inheritParams default_params_doci
-#' @return TRUE is NetMHCIIpan is installed locally,
+#' @return TRUE is NetMHCpan is installed locally,
 #'   FALSE otherwise
 #' @author Richèl J.C. Bilderbeek
 #' @export
@@ -24,9 +24,9 @@ is_netMHCpan_installed <- function(
   is_installed
 }
 
-#' Measure if NetMHCIIpan binary is installed locally
+#' Measure if NetMHCpan binary is installed locally
 #' @inheritParams default_params_doc
-#' @return TRUE is NetMHCIIpan binary is installed locally,
+#' @return TRUE is NetMHCpan binary is installed locally,
 #'   FALSE otherwise
 #' @author Richèl J.C. Bilderbeek
 #' @export
@@ -43,9 +43,9 @@ is_netMHCpan_bin_installed <- function(
   file.exists(bin_file_path)
 }
 
-#' Measure if NetMHCIIpan data folder is installed locally
+#' Measure if NetMHCpan data folder is installed locally
 #' @inheritParams default_params_doc
-#' @return TRUE is NetMHCIIpan data folder is installed locally,
+#' @return TRUE is NetMHCpan data folder is installed locally,
 #'   FALSE otherwise
 #' @author Richèl J.C. Bilderbeek
 #' @export
@@ -60,9 +60,9 @@ is_netMHCpan_data_installed <- function(
   file.exists(data_file_path)
 }
 
-#' Measure if NetMHCIIpan is set up
+#' Measure if NetMHCpan is set up
 #' @inheritParams default_params_doc
-#' @return TRUE is NetMHCIIpan is set up locally,
+#' @return TRUE is NetMHCpan is set up locally,
 #'   FALSE otherwise
 #' @author Richèl J.C. Bilderbeek
 #' @export
