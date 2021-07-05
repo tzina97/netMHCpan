@@ -2,15 +2,15 @@
 #'
 #' Check if the alleles have a valid NetMHC2pan name.
 #' Will \link{stop} if not.
-#' @seealso Use \link{to_netmhc2pan_name} to convert
-#' a formal name to an NetMHC2pan name.
-#' Use \link{get_netmhc2pan_alleles} for a list
-#' of all supported alleles (in NetMHC2pan naming format).
+#' @seealso Use \link{to_netNHCpan_name} to convert
+#' a formal name to an NetMHCpan name.
+#' Use \link{get_netMHCpan_alleles} for a list
+#' of all supported alleles (in NetMHCpan naming format).
 #' @inheritParams default_params_doc
 #' @return nothing
 #' @author Richèl J.C. Bilderbeek
 #' @examples
-#' if (is_netmhc2pan_installed()) {
+#' if (is_netMHCpan_installed()) {
 #'   check_alleles("DRB1_0101")
 #'   check_alleles(c("DRB1_0102", "DRB1_0103"))
 #' }
