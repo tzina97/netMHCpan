@@ -1,8 +1,8 @@
 ^\.travis\.yml$
-^netmhc2pan\.Rproj$
+^netMHCan\.Rproj$
 ^\.Rproj\.user$
 ^scripts$
 ^NEWS\.md$
 ^pics$
 LICENSE
-netMHCIIpan-3.2.Linux.tar.gz
+netMHCpan-4.1.Linux.tar.gz

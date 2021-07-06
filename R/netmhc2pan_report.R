@@ -1,7 +1,7 @@
 #' Create a \code{netMHCpan} report, to be used when reporting bugs
 #' @inheritParams default_params_doc
 #' @examples
-#' netmhc2pan_report()
+#' netMHCpan_report()
 #' @author Richèl J.C. Bilderbeek
 #' @export
 netMHCpan_report <- function(
