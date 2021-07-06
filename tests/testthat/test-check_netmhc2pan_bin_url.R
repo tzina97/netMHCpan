@@ -17,7 +17,6 @@ test_that("be verbose", {
 
 test_that("error message for invalid URL", {
   expect_error(
-    check_netMHCpan_bin_url(netMHCpan_bin_url = "does_not_exist"),
-    "YouTube"
+    check_netMHCpan_bin_url(netMHCpan_bin_url = "does_not_exist")
   )
 })
