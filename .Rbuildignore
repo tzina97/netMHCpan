@@ -4,5 +4,6 @@
 ^scripts$
 ^NEWS\.md$
 ^pics$
+^\.github
 LICENSE
 netMHCpan-4.1.Linux.tar.gz
