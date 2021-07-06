@@ -10,13 +10,13 @@
 #' @export
 get_netMHCpan_data_url <- function() {
   file.path(
-    "https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz",
+    "https://services.healthtech.dtu.dk/services",
     netMHCpan::capitalize_first_char(
       basename(
         netMHCpan::get_default_netMHCpan_subfolder()
       )
     ),
-    "data.Linux.tar.gz"
+    "data.tar.gz"
   )
 
 }
