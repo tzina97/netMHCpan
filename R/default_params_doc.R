@@ -14,7 +14,6 @@
 #'   Use \link{get_netMHCpan_archive_filename} to get this filename.
 #' @param netMHCpan_bin_tarfile_path path of the
 #'   NetMHCpan binary tarball file
-#'##This needs CHANGING
 #' @param netMHCpan_bin_url URL to download the
 #'   NetMHCpan binary tarball file from,
 #'   similar to, for example,

@@ -25,7 +25,7 @@ install_netMHCpan_bin <- function(
     stop("NetMHCpan binary is already installed at '", bin_path, "'")
   }
 
-  netMHCpan_tarfile_path <- file.path(
+  netMHCpan_bin_tarfile_path <- file.path(
     netMHCpan_folder_name,
     netMHCpan_archive_filename
   )
@@ -35,18 +35,18 @@ install_netMHCpan_bin <- function(
     recursive = TRUE
   )
   netMHCpan::check_can_create_file(
-    filename = netMHCpan_tarfile_path,
+    filename = netMHCpan_bin_tarfile_path,
     overwrite = FALSE
   )
   netMHCpan::download_netMHCpan_bin(
     netMHCpan_bin_url = netMHCpan_bin_url,
-    netMHCpan_tarfile_path = netMHCpan_tarfile_path,
+    netMHCpan_bin_tarfile_path = netMHCpan_bin_tarfile_path,
     verbose = verbose,
     netMHCpan_archive_filename = netMHCpan_archive_filename,
     temp_local_file = temp_local_file
   )
   netMHCpan::install_netMHCpan_bin_from_file(
-    netMHCpan_tarfile_path = netMHCpan_tarfile_path,
+    netMHCpan_bin_tarfile_path = netMHCpan_bin_tarfile_path,
     verbose = verbose,
     netMHCpan_archive_filename = netMHCpan_archive_filename,
     netMHCpan_folder_name = netMHCpan_folder_name

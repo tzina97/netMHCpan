@@ -20,8 +20,7 @@ similar to, for example,
 Use \link{get_netMHCpan_bin_url} to get the default URL.}
 
 \item{netMHCpan_bin_tarfile_path}{path of the
-  NetMHCpan binary tarball file
-##This needs CHANGING}
+NetMHCpan binary tarball file}
 
 \item{verbose}{set to TRUE for more output}
 

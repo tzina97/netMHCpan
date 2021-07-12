@@ -50,8 +50,7 @@ which is used in installation of NetMHCpan.
 Use \link{get_netMHCpan_archive_filename} to get this filename.}
 
 \item{netMHCpan_bin_tarfile_path}{path of the
-  NetMHCpan binary tarball file
-##This needs CHANGING}
+NetMHCpan binary tarball file}
 
 \item{netMHCpan_bin_url}{URL to download the
 NetMHCpan binary tarball file from,

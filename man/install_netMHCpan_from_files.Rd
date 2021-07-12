@@ -15,8 +15,7 @@ install_netMHCpan_from_files(
 }
 \arguments{
 \item{netMHCpan_bin_tarfile_path}{path of the
-  NetMHCpan binary tarball file
-##This needs CHANGING}
+NetMHCpan binary tarball file}
 
 \item{netMHCpan_data_tarfile_path}{path of the
 NetMHCpan data tarball file}

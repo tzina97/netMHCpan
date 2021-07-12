@@ -13,8 +13,7 @@ install_netMHCpan_bin_from_file(
 }
 \arguments{
 \item{netMHCpan_bin_tarfile_path}{path of the
-  NetMHCpan binary tarball file
-##This needs CHANGING}
+NetMHCpan binary tarball file}
 
 \item{verbose}{set to TRUE for more output}
 
