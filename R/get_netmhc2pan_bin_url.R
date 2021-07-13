@@ -10,5 +10,5 @@
 #' @author Richèl J.C. Bilderbeek
 #' @export
 get_netMHCpan_bin_url <- function() {
-  " https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz" # nolint indeed a long URL
+  " https://services.healthtech.dtu.dk/services" # nolint indeed a long URL
 }

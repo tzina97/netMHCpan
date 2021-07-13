@@ -7,5 +7,6 @@
 get_netMHCpan_archive_filename <- function( # nolint indeed a long function name
   netMHCpan_version = get_default_netMHCpan_version()
 ) {
-  paste0("netMHCpan-", netMHCpan_version, ".Linux.tar.gz")
+  paste0("NetMHCpan-", netMHCpan_version, "/data.tar.gz")
+
 }
