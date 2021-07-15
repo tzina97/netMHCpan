@@ -45,7 +45,7 @@ See \link{get_netMHCpan_alleles} for a full list}
 See \link{get_netMHCpan_alleles} for a full list}
 
 \item{netMHCpan_archive_filename}{the NetMHCpan archive
-filename, for example \code{netMHCpan-4.1.Linux.tar.gz},
+filename, for example \code{NetMHCpan-4.1/data.tar.gz},
 which is used in installation of NetMHCpan.
 Use \link{get_netMHCpan_archive_filename} to get this filename.}
 

@@ -9,7 +9,7 @@
 #' @param mhc_haplotype one MHC haplotype, e.g. \code{DRB1_0101}.
 #'   See \link{get_netMHCpan_alleles} for a full list
 #' @param netMHCpan_archive_filename the NetMHCpan archive
-#'   filename, for example \code{netMHCpan-4.1.Linux.tar.gz},
+#'   filename, for example \code{NetMHCpan-4.1/data.tar.gz},
 #'   which is used in installation of NetMHCpan.
 #'   Use \link{get_netMHCpan_archive_filename} to get this filename.
 #' @param netMHCpan_bin_tarfile_path path of the

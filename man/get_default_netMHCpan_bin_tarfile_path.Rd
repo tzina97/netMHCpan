@@ -18,7 +18,7 @@ Use \link{get_default_netMHCpan_subfolder} to see the location
 of the default NetMHCpan subfolder.}
 
 \item{netMHCpan_archive_filename}{the NetMHCpan archive
-filename, for example \code{netMHCpan-4.1.Linux.tar.gz},
+filename, for example \code{NetMHCpan-4.1/data.tar.gz},
 which is used in installation of NetMHCpan.
 Use \link{get_netMHCpan_archive_filename} to get this filename.}
 }

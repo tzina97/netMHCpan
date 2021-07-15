@@ -24,11 +24,14 @@ check_netMHCpan_bin_url <- function(
     filename = temp_local_file,
     overwrite = FALSE
   )
+  dir.create(dirname(temp_local_file), showWarnings = FALSE, recursive = TRUE)
+
   tryCatch({
     suppressWarnings(
       utils::download.file(
         url = url,
         destfile = temp_local_file,
+        method = "libcurl",
         quiet = !verbose
       )
     )

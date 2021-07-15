@@ -30,6 +30,7 @@ check_can_create_file <- function(
       )
     }
   }
+  dir.create(dirname(filename), showWarnings = FALSE, recursive = TRUE)
   tryCatch(
     suppressWarnings(
       writeLines(text = "check_can_create_file testing text", con = filename)

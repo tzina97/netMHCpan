@@ -47,6 +47,7 @@ download_netMHCpan_bin <- function(
       utils::download.file(
         url = url,
         destfile = netMHCpan_bin_tarfile_path,
+        method = "libcurl",
         quiet = !verbose
       )
     ),

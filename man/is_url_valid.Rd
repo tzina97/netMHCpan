@@ -21,7 +21,7 @@ Use \link{get_netMHCpan_bin_url} to get the default URL.}
 \item{verbose}{set to TRUE for more output}
 
 \item{netMHCpan_archive_filename}{the NetMHCpan archive
-filename, for example \code{netMHCpan-4.1.Linux.tar.gz},
+filename, for example \code{NetMHCpan-4.1/data.tar.gz},
 which is used in installation of NetMHCpan.
 Use \link{get_netMHCpan_archive_filename} to get this filename.}
 
