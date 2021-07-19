@@ -32,7 +32,8 @@ Suggests:
     rmarkdown,
     markdown,
     testthat,
-    spelling
+    spelling,
+    qpdf
 VignetteBuilder: knitr
 RoxygenNote: 7.1.1
 Language: en-US

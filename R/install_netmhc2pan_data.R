@@ -24,13 +24,13 @@ install_netMHCpan_data <- function(
     "data"
   )
   if (file.exists(data_folder_path)) {
-    stop("NetMHCpan data is already installed")
+    return ("NetMHCpan data is already installed")
   }
 
   local_path <- file.path(
     netMHCpan_folder_name,
     basename(get_default_netMHCpan_subfolder()),
-    "data.Linux.tar.gz"
+    "data.tar.gz"
   )
 
   dir.create(dirname(local_path), showWarnings = FALSE, recursive = TRUE)
