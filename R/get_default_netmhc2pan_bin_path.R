@@ -8,5 +8,5 @@
 get_default_netMHCpan_bin_path <- function( # nolint indeed a long name, I keep it for the sake of readability
   netMHCpan_subfolder = get_default_netMHCpan_subfolder()
 ) {
-  file.path(netMHCpan_subfolder, "data.tar.gz")
+  file.path(netMHCpan_subfolder, "netMHCpan")
 }
