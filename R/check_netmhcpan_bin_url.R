@@ -5,22 +5,22 @@
 #' This URL link expires after 4 hours.
 #' @inheritParams default_params_doc
 #' @export
-check_netMHCpan_bin_url <- function(
-  netMHCpan_bin_url = get_netMHCpan_bin_url(),
+check_netmhcpan_bin_url <- function(
+  netmhcpan_bin_url = get_netmhcpan_bin_url(),
   verbose = FALSE,
-  netMHCpan_archive_filename = get_netMHCpan_archive_filename(),
-  temp_local_file = tempfile(pattern = "check_netMHCpan_bin_url_")
+  netmhcpan_archive_filename = get_netmhcpan_archive_filename(),
+  temp_local_file = tempfile(pattern = "check_netmhcpan_bin_url_")
 ) {
-  url <- file.path(netMHCpan_bin_url, netMHCpan_archive_filename)
+  url <- file.path(netmhcpan_bin_url, netmhcpan_archive_filename)
   if (verbose) {
     message(
-      "netMHCpan_bin_url: ", netMHCpan_bin_url, " \n",
-      "netMHCpan_archive_filename: ", netMHCpan_archive_filename, " \n",
+      "netmhcpan_bin_url: ", netmhcpan_bin_url, " \n",
+      "netmhcpan_archive_filename: ", netmhcpan_archive_filename, " \n",
       "temp_local_file: ", temp_local_file, " \n",
       "url: ", url
     )
   }
-  netMHCpan::check_can_create_file(
+  netmhcpan::check_can_create_file(
     filename = temp_local_file,
     overwrite = FALSE
   )
@@ -37,13 +37,13 @@ check_netMHCpan_bin_url <- function(
     )
   }, error = function(e) {
       stop(
-        "'netMHCpan_bin_url' is invalid.\n",
+        "'netmhcpan_bin_url' is invalid.\n",
         "URL: ", url, "\n",
         "Request a download URL at the NetMHCpan request page at\n",
         "\n",
         paste0(
           "http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCpan",
-          get_default_netMHCpan_version(),
+          get_default_netmhcpan_version(),
           "\n"
         ),
         "Full error message: \n",

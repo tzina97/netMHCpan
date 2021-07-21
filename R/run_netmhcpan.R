@@ -2,43 +2,43 @@
 #' @inheritParams default_params_doc
 #' @return a data frame with the NetMHCpan results
 #' @examples
-#' if (is_netMHCpan_installed()) {
+#' if (is_netmhcpan_installed()) {
 #'
 #'   fasta_filename <- system.file(
-#'     "extdata", "example.fasta", package = "netMHCpan"
+#'     "extdata", "example.fasta", package = "netmhcpan"
 #'   )
-#'   run_netMHCpan(fasta_filename)
+#'   run_netmhcpan(fasta_filename)
 #'
 #'   # Two alleles
 #'   alleles <- c("DRB1_0101", "DRB1_0102")
 #'   # Run NetMHCpan with these two alleles
-#'   run_netmhc2pan(fasta_filename, alleles = alleles)
+#'   run_netmhcpan(fasta_filename, alleles = alleles)
 #' }
 #' @author Richèl J.C. Bilderbeek
 #' @export
-run_netMHCpan <- function(
+run_netmhcpan <- function(
   fasta_filename,
   alleles = "DRB1_0101",
   peptide_length = 15,
-  netMHCpan_folder_name = get_default_netMHCpan_folder(),
-  temp_xls_filename = netMHCpan::create_temp_xls_filename()
+  netmhcpan_folder_name = get_default_netmhcpan_folder(),
+  temp_xls_filename = netmhcpan::create_temp_xls_filename()
 ) {
   # Check input
-  netMHCpan::check_netMHCpan_installation(netMHCpan_folder_name)
-  netMHCpan::check_alleles(
+  netmhcpan::check_netmhcpan_installation(netmhcpan_folder_name)
+  netmhcpan::check_alleles(
     alleles = alleles,
-    netMHCpan_folder_name = netMHCpan_folder_name
+    netmhcpan_folder_name = netmhcpan_folder_name
   )
-  netMHCpan::check_fasta_file_sequence_lengths(
+  netmhcpan::check_fasta_file_sequence_lengths(
     fasta_filename = fasta_filename,
     peptide_length = peptide_length
   )
 
   testthat::expect_true(file.exists(fasta_filename))
   bin_file_path <- file.path(
-    netMHCpan_folder_name,
-    basename(get_default_netMHCpan_subfolder()),
-    basename(get_default_netMHCpan_bin_path())
+    netmhcpan_folder_name,
+    basename(get_default_netmhcpan_subfolder()),
+    basename(get_default_netmhcpan_bin_path())
   )
   testthat::expect_true(file.exists(bin_file_path))
   # Adding '-filter' and '1' top the args does not help: the XLS
@@ -63,7 +63,7 @@ run_netMHCpan <- function(
   }
   if (!file.exists(temp_xls_filename)) {
     stop(
-      "NetMHCIIpan output file not created. ",
+      "NetMHCpan output file not created. ",
       "alleles_as_word: '", alleles_as_word, "'. ",
       "peptide_length: '", peptide_length, "'. ",
       "temp_xls_filename: '", temp_xls_filename, "'. ",

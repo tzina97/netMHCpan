@@ -3,17 +3,17 @@
 #' Get the NetMHCpan data tarball URL.
 #' @seealso
 #' Use \link{is_url_valid} to determine if the download URL is still valid.
-#' Use \link{check_netMHCpan_data_url} to get a helpful error message if this
+#' Use \link{check_netmhcpan_data_url} to get a helpful error message if this
 #' URL is invalid.
 #' @return a download URL
 #' @author Richèl J.C. Bilderbeek
 #' @export
-get_netMHCpan_data_url <- function() {
+get_netmhcpan_data_url <- function() {
   file.path(
     "https://services.healthtech.dtu.dk/services",
-    netMHCpan::capitalize_first_char(
+    netmhcpan::capitalize_first_char(
       basename(
-        netMHCpan::get_default_netMHCpan_subfolder()
+        netmhcpan::get_default_netmhcpan_subfolder()
       )
     ),
     "data.tar.gz"

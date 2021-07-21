@@ -4,36 +4,36 @@
 \alias{check_alleles}
 \title{Check the allele names}
 \usage{
-check_alleles(alleles, netMHCpan_folder_name = get_default_netMHCpan_folder())
+check_alleles(alleles, netmhcpan_folder_name = get_default_netmhcpan_folder())
 }
 \arguments{
 \item{alleles}{one or more alleles, e.g. \code{DRB1_0101}.
-See \link{get_netMHCpan_alleles} for a full list}
+See \link{get_netmhcpan_alleles} for a full list}
 
-\item{netMHCpan_folder_name}{the folder (to be) used by NetMHCpan.
+\item{netmhcpan_folder_name}{the folder (to be) used by NetMHCpan.
 From this location, a subfolder for NetMHCpan is created.
-Use \link{get_default_netMHCpan_folder} to see the location
+Use \link{get_default_netmhcpan_folder} to see the location
 of the default NetMHCpan folder.
-Use \link{get_default_netMHCpan_subfolder} to see the location
+Use \link{get_default_netmhcpan_subfolder} to see the location
 of the default NetMHCpan subfolder.}
 }
 \value{
 nothing
 }
 \description{
-Check if the alleles have a valid NetMHC2pan name.
+Check if the alleles have a valid NetMHCpan name.
 Will \link{stop} if not.
 }
 \examples{
-if (is_netMHCpan_installed()) {
+if (is_netmhcpan_installed()) {
   check_alleles("DRB1_0101")
   check_alleles(c("DRB1_0102", "DRB1_0103"))
 }
 }
 \seealso{
-Use \link{to_netMHCpan_name} to convert
+Use \link{to_netmhcpan_name} to convert
 a formal name to an NetMHCpan name.
-Use \link{get_netMHCpan_alleles} for a list
+Use \link{get_netmhcpan_alleles} for a list
 of all supported alleles (in NetMHCpan naming format).
 }
 \author{

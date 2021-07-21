@@ -2,7 +2,7 @@ test_that("use", {
   expect_silent(
     check_fasta_file_sequence_lengths(
       fasta_filename = system.file(
-        "extdata", "example.fasta", package = "netMHCpan"
+        "extdata", "example.fasta", package = "netmhcpan"
       ),
       peptide_length = 13
     )
@@ -10,7 +10,7 @@ test_that("use", {
   expect_silent(
     check_fasta_file_sequence_lengths(
       fasta_filename = system.file(
-        "extdata", "example2.fasta", package = "netMHCpan"
+        "extdata", "example2.fasta", package = "netmhcpan"
       ),
       peptide_length = 13
     )

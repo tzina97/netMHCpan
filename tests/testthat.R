@@ -1,4 +1,4 @@
 library(testthat)
-library(netMHCpan)
+library(netmhcpan)
 
-test_check("netMHCpan")
+test_check("netmhcpan")

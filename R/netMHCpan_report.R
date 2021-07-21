@@ -1,25 +1,25 @@
-#' Create a \code{netMHCpan} report, to be used when reporting bugs
+#' Create a \code{netmhcpan} report, to be used when reporting bugs
 #' @inheritParams default_params_doc
 #' @examples
-#' netMHCpan_report()
+#' netmhcpan_report()
 #' @author Richèl J.C. Bilderbeek
 #' @export
-netMHCpan_report <- function(
-  netMHCpan_folder_name = get_default_netMHCpan_folder()
+netmhcpan_report <- function(
+  netmhcpan_folder_name = get_default_netmhcpan_folder()
 ) {
   kat <- function(x) message(x, sep = "\n")
   kat("***************")
   kat("* NetMHCpan *")
   kat("***************")
   kat(paste0("OS: ", rappdirs::app_dir()$os))
-  kat(paste0("'tcsh' installed: ", netMHCpan::is_tcsh_installed()))
+  kat(paste0("'tcsh' installed: ", netmhcpan::is_tcsh_installed()))
   kat("**************")
   kat("* netMHCpan *")
   kat("**************")
-  f <- netMHCpan_folder_name
-  kat(paste0("bin installed: ", netMHCpan::is_netMHCpan_bin_installed(f)))
-  kat(paste0("data installed: ", netMHCpan::is_netMHCpan_data_installed(f)))
-  kat(paste0("is set up: ", netMHCpan::is_netMHCpan_set_up(f)))
+  f <- netmhcpan_folder_name
+  kat(paste0("bin installed: ", netmhcpan::is_netmhcpan_bin_installed(f)))
+  kat(paste0("data installed: ", netmhcpan::is_netmhcpan_data_installed(f)))
+  kat(paste0("is set up: ", netmhcpan::is_netmhcpan_set_up(f)))
   kat("****************")
   kat("* session info *")
   kat("****************")

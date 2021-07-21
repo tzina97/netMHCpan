@@ -12,15 +12,15 @@
 #' @return Nothing
 #' @author Richèl J.C. Bilderbeek
 #' @export
-install_netMHCpan_data_from_file <- function( # nolint long function name indeed
-  netMHCpan_data_tarfile_path,
-  netMHCpan_folder_name = rappdirs::user_data_dir(),
+install_netmhcpan_data_from_file <- function( # nolint long function name indeed
+  netmhcpan_data_tarfile_path,
+  netmhcpan_folder_name = rappdirs::user_data_dir(),
   verbose = FALSE
 ) {
-  testthat::expect_true(file.exists(netMHCpan_data_tarfile_path))
+  testthat::expect_true(file.exists(netmhcpan_data_tarfile_path))
   data_folder_path <- file.path(
-    netMHCpan_folder_name,
-    basename(get_default_netMHCpan_subfolder()),
+    netmhcpan_folder_name,
+    basename(get_default_netmhcpan_subfolder()),
     "data"
   )
   if (file.exists(data_folder_path)) {
@@ -28,21 +28,21 @@ install_netMHCpan_data_from_file <- function( # nolint long function name indeed
   }
 
   local_path <- file.path(
-    netMHCpan_folder_name,
-    basename(get_default_netMHCpan_subfolder()),
+    netmhcpan_folder_name,
+    basename(get_default_netmhcpan_subfolder()),
     "data.Linux.tar.gz"
   )
 
   dir.create(dirname(local_path), showWarnings = FALSE, recursive = TRUE)
-  netMHCpan::check_can_create_file(filename = local_path, overwrite = FALSE)
+  netmhcpan::check_can_create_file(filename = local_path, overwrite = FALSE)
 
   # Linux has a tar file
   utils::untar(
-    tarfile = netMHCpan_data_tarfile_path,
+    tarfile = netmhcpan_data_tarfile_path,
     exdir = path.expand(
       file.path(
-        netMHCpan_folder_name,
-        basename(get_default_netMHCpan_subfolder())
+        netmhcpan_folder_name,
+        basename(get_default_netmhcpan_subfolder())
       )
     )
   )

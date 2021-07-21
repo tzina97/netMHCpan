@@ -1,24 +1,18 @@
 #!/bin/bash
 #
-# Installs NetMHCpan using the R code in the 'netMHCpan' package
+# Installs NetMHCpan using the R code in the 'netmhcpan' package
 #
-# Because the R code in the package uses 'netMHCpan::' in calling
+# Because the R code in the package uses 'netmhcpan::' in calling
 # its functions, this script removes these prefixes.
 #
 # Usage:
 #
-#  ./scripts/install_netMHCpan.sh
+#  ./scripts/install_netmhcpan.sh
 #
 #
-cat R/install_netMHCpan.R > tempscript.R
-cat R/capitalize_first_char.R >> tempscript.R
-cat R/get_default_netMHCpan_bin_path.R >> tempscript.R
-cat R/get_default_netMHCpan_folder.R >> tempscript.R
-cat R/get_default_netMHCpan_subfolder.R >> tempscript.R
-cat R/get_netMHCpan_bin_url.R >> tempscript.R
-cat R/is_netMHCpan_installed.R >> tempscript.R
-echo "install_netMHCpan()" >> tempscript.R
-sed -i'.orginal' "s/netMHCpan:://g" tempscript.R
+cat R/*.R > tempscript.R
+echo "install_netmhcpan()" >> tempscript.R
+sed -i'.orginal' "s/netmhcpan:://g" tempscript.R
 cat tempscript.R
 Rscript tempscript.R
 rm tempscript.R

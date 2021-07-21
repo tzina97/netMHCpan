@@ -2,20 +2,20 @@
 #' @inheritParams default_params_doc
 #' @return a character vector with the NetMHCpan alleles
 #' @examples
-#' if (is_netMHCpan_installed()) {
-#'   get_netMHCpan_alleles()[1:5]
+#' if (is_netmhcpan_installed()) {
+#'   get_netmhcpan_alleles()[1:5]
 #' }
 #' @author Richèl J.C. Bilderbeek
 #' @export
-get_netMHCpan_alleles <- function(
-  netMHCpan_folder_name = get_default_netMHCpan_folder()
+get_netmhcpan_alleles <- function(
+  netmhcpan_folder_name = get_default_netmhcpan_folder()
 ) {
-  netMHCpan::check_netMHCpan_installation(netMHCpan_folder_name)
-  testit::assert(netMHCpan::is_netMHCpan_installed(netMHCpan_folder_name))
+  netmhcpan::check_netmhcpan_installation(netmhcpan_folder_name)
+  testit::assert(netmhcpan::is_netmhcpan_installed(netmhcpan_folder_name))
   bin_file_path <- file.path(
-    netMHCpan_folder_name,
-    basename(get_default_netMHCpan_subfolder()),
-    basename(get_default_netMHCpan_bin_path())
+    netmhcpan_folder_name,
+    basename(get_default_netmhcpan_subfolder()),
+    basename(get_default_netmhcpan_bin_path())
   )
   testit::assert(file.exists(bin_file_path))
   alleles <- system2(

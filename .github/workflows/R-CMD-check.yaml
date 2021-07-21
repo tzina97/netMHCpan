@@ -11,8 +11,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - install_netMHCpan: "true"
-          - install_netMHCpan: "false"
+          - install_netmhcpan: "true"
+          - install_netmhcpan: "false"
 
     runs-on: ubuntu-18.04
     env:
@@ -40,12 +40,12 @@ jobs:
 
       - name: Show NETMHCPAN
         env:
-          INSTALL_NETMHCPAN: ${{ matrix.install_netMHCpan }}
+          INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
         run: echo "$INSTALL_NETMHCPAN"
 
       - name: If statement on NETMHCPAN is true
         env:
-          INSTALL_NETMHCPAN: ${{ matrix.install_netmhc2pan }}
+          INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
         run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then echo "Yay!"; fi
 
       - name: Show location
@@ -53,18 +53,18 @@ jobs:
 
       - name: If statement on NETMHCPAN is false
         env:
-          INSTALL_NETMHCPAN: ${{ matrix.install_netMHCpan }}
+          INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
         run: if [[ "$INSTALL_NETMHCPAN" == false ]]; then echo "Nay!"; fi
 
       - name: Show NETMHCPAN install script
         env:
-          INSTALL_NETMHCPAN: ${{ matrix.install_netmhc2pan }}
-        run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then cat scripts/install_netMHCpan.sh; fi
+          INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
+        run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then cat scripts/install_netmhcpan.sh; fi
 
       - name: Install NETMHCPAN
         env:
-          INSTALL_NETMHCPAN: ${{ matrix.install_netMHCpan }}
-        run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then ./scripts/install_netMHCpan.sh; fi
+          INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
+        run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then ./scripts/install_netmhcpan.sh; fi
 
       - name: Check
         run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")

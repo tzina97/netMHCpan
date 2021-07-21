@@ -1,3 +1,3 @@
 test_that("use", {
-  expect_equal("character", class(get_netMHCpan_bin_url()))
+  expect_equal("character", class(get_netmhcpan_bin_url()))
 })

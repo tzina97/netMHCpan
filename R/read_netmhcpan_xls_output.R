@@ -4,7 +4,7 @@
 #' which is an \code{XLS} file by default.
 #' @inheritParams default_params_doc
 #' @export
-read_netMHCpan_xls_output  <- function(
+read_netmhcpan_xls_output  <- function(
   xls_filename
 ) {
   t <- readr::read_delim(

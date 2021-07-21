@@ -9,18 +9,18 @@
 #' @return Nothing
 #' @examples
 #' \donttest{
-#'   install_netMHCpan_data()
+#'   install_netmhcpan_data()
 #' }
 #' @author Richèl J.C. Bilderbeek
 #' @export
-install_netMHCpan_data <- function(
-  netMHCpan_data_url = get_netMHCpan_data_url(),
-  netMHCpan_folder_name = rappdirs::user_data_dir(),
+install_netmhcpan_data <- function(
+  netmhcpan_data_url = get_netmhcpan_data_url(),
+  netmhcpan_folder_name = rappdirs::user_data_dir(),
   verbose = FALSE
 ) {
   data_folder_path <- file.path(
-    netMHCpan_folder_name,
-    basename(get_default_netMHCpan_subfolder()),
+    netmhcpan_folder_name,
+    basename(get_default_netmhcpan_subfolder()),
     "data"
   )
   if (file.exists(data_folder_path)) {
@@ -28,16 +28,16 @@ install_netMHCpan_data <- function(
   }
 
   local_path <- file.path(
-    netMHCpan_folder_name,
-    basename(get_default_netMHCpan_subfolder()),
+    netmhcpan_folder_name,
+    basename(get_default_netmhcpan_subfolder()),
     "data.tar.gz"
   )
 
   dir.create(dirname(local_path), showWarnings = FALSE, recursive = TRUE)
-  netMHCpan::check_can_create_file(filename = local_path, overwrite = FALSE)
+  netmhcpan::check_can_create_file(filename = local_path, overwrite = FALSE)
 
   utils::download.file(
-    url = netMHCpan_data_url,
+    url = netmhcpan_data_url,
     destfile = local_path,
     quiet = !verbose
   )
@@ -47,8 +47,8 @@ install_netMHCpan_data <- function(
     tarfile = local_path,
     exdir = path.expand(
       file.path(
-        netMHCpan_folder_name,
-        basename(get_default_netMHCpan_subfolder())
+        netmhcpan_folder_name,
+        basename(get_default_netmhcpan_subfolder())
       )
     )
   )

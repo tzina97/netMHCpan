@@ -5,25 +5,25 @@
 \title{Is the download URL valid?}
 \usage{
 is_url_valid(
-  netMHCpan_bin_url = get_netMHCpan_bin_url(),
+  netmhcpan_bin_url = get_netmhcpan_bin_url(),
   verbose = FALSE,
-  netMHCpan_archive_filename = get_netMHCpan_archive_filename(),
-  temp_local_file = tempfile(pattern = "netMHCpan_is_url_valid_")
+  netmhcpan_archive_filename = get_netmhcpan_archive_filename(),
+  temp_local_file = tempfile(pattern = "netmhcpan_is_url_valid_")
 )
 }
 \arguments{
-\item{netMHCpan_bin_url}{URL to download the
+\item{netmhcpan_bin_url}{URL to download the
 NetMHCpan binary tarball file from,
 similar to, for example,
-\code{https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz}.
-Use \link{get_netMHCpan_bin_url} to get the default URL.}
+\code{ FIX LINK}.
+Use \link{get_netmhcpan_bin_url} to get the default URL.}
 
 \item{verbose}{set to TRUE for more output}
 
-\item{netMHCpan_archive_filename}{the NetMHCpan archive
-filename, for example \code{NetMHCpan-4.1/data.tar.gz},
+\item{netmhcpan_archive_filename}{the NetMHCpan archive
+filename, for example \code{netMHCpan-4.1b.Linux.tar.gz},
 which is used in installation of NetMHCpan.
-Use \link{get_netMHCpan_archive_filename} to get this filename.}
+Use \link{get_netmhcpan_archive_filename} to get this filename.}
 
 \item{temp_local_file}{path to the temporary file to store the URL to.
 This file will be deleted afterwards.}

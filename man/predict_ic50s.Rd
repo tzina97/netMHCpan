@@ -8,9 +8,9 @@ predict_ic50s(
   protein_sequence,
   peptide_length,
   mhc_haplotype,
-  netMHCpan_folder_name = get_default_netMHCpan_folder(),
-  temp_fasta_filename = netMHCpan::create_temp_fasta_filename(),
-  temp_xls_filename = netMHCpan::create_temp_xls_filename()
+  netmhcpan_folder_name = get_default_netmhcpan_folder(),
+  temp_fasta_filename = netmhcpan::create_temp_fasta_filename(),
+  temp_xls_filename = netmhcpan::create_temp_xls_filename()
 )
 }
 \arguments{
@@ -19,13 +19,13 @@ predict_ic50s(
 \item{peptide_length}{length of a peptide}
 
 \item{mhc_haplotype}{one MHC haplotype, e.g. \code{DRB1_0101}.
-See \link{get_netMHCpan_alleles} for a full list}
+See \link{get_netmhcpan_alleles} for a full list}
 
-\item{netMHCpan_folder_name}{the folder (to be) used by NetMHCpan.
+\item{netmhcpan_folder_name}{the folder (to be) used by NetMHCpan.
 From this location, a subfolder for NetMHCpan is created.
-Use \link{get_default_netMHCpan_folder} to see the location
+Use \link{get_default_netmhcpan_folder} to see the location
 of the default NetMHCpan folder.
-Use \link{get_default_netMHCpan_subfolder} to see the location
+Use \link{get_default_netmhcpan_subfolder} to see the location
 of the default NetMHCpan subfolder.}
 
 \item{temp_fasta_filename}{name for a temporary FASTA file,

@@ -25,7 +25,7 @@ before_script:
   - sudo apt install tcsh
   - which tcsh
   # NetMHCpan
-  - if [[ "$INSTALL_NETMHCPAN" == true ]]; then ./scripts/install_netMHCpan.sh; fi
+  - if [[ "$INSTALL_NETMHCPAN" == true ]]; then ./scripts/install_netmhcpan.sh; fi
   # LAPACK
   - sudo apt-get install liblapack-dev -y
   # proselint
@@ -38,14 +38,14 @@ after_success:
   - if [[ "$INSTALL_NETMHCPAN" == false ]]; then proselint *.md | egrep -v "typography\.symbols\.curly_quotes"; fi
   - # No local files created
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then if [[ $(egrep -R "\"~" --include={*.R,*.Rmd}) ]]; then echo "Local file created"; exit 1; fi; fi
-  - Rscript -e 'netMHCpan::netMHCpan_report()'
+  - Rscript -e 'netmhcpan::netmhcpan_report()'
   - Rscript scripts/issue_3.R
   # Download thesis
   - wget https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf
 
 after_failure:
   - Rscript -e 'remotes::install_github("tzina97/netMHCpanW")'
-  - Rscript -e 'netMHCpan::netMHCpan_report()'
+  - Rscript -e 'netmhcpan::netmhcpan_report()'
   - ls
   # Download thesis
   - wget https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf

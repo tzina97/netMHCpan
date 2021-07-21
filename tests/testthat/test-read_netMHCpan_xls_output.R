@@ -1,9 +1,9 @@
 test_that("use", {
 
   xls_filename <- system.file(
-    "extdata", "example.xls", package = "netMHCpan"
+    "extdata", "example.xls", package = "netmhcpan"
   )
-  t <- read_netMHCpan_xls_output(xls_filename)
+  t <- read_netmhcpan_xls_output(xls_filename)
 
   expect_true("Pos" %in% names(t))
   expect_true("Peptide" %in% names(t))
@@ -19,9 +19,9 @@ test_that("use", {
 
   skip("Cannot parse output with 2 alleles yet")
   xls_filename <- system.file(
-    "extdata", "example2.xls", package = "netMHCpan"
+    "extdata", "example2.xls", package = "netmhcpan"
   )
-  t <- read_netMHCpan_xls_output(xls_filename)
+  t <- read_netmhcpan_xls_output(xls_filename)
 
   expect_true("Pos" %in% names(t))
   expect_true("Peptide" %in% names(t))

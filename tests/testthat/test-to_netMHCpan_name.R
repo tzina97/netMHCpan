@@ -1,10 +1,10 @@
 test_that("use", {
-  expect_silent(to_netMHCpan_name("HLA-DRB1*0101"))
-  expect_silent(to_netMHCpan_name("HLA-DQA1*0501/DQB1*0201"))
+  expect_silent(to_netmhcpan_name("HLA-DRB1*0101"))
+  expect_silent(to_netmhcpan_name("HLA-DQA1*0501/DQB1*0201"))
 })
 
 test_that("use", {
-  if (!is_netMHCpan_installed()) return()
+  if (!is_netmhcpan_installed()) return()
   mhc_haplotypes <- c(
     "HLA-DRB1*0101",
     "HLA-DRB1*0301",
@@ -29,7 +29,7 @@ test_that("use", {
     "HLA-DQA1*0102/DQB1*0602"
   )
   for (mhc_haplotype in mhc_haplotypes) {
-    netMHCpan_name <- to_netMHCpan_name(mhc_haplotype)
-    expect_true(is_netMHCpan_haplotype(netMHCpan_name))
+    netmhcpan_name <- to_netmhcpan_name(mhc_haplotype)
+    expect_true(is_netmhcpan_haplotype(netmhcpan_name))
   }
 })

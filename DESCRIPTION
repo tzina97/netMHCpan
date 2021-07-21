@@ -1,4 +1,4 @@
-Package: netMHCpan
+Package: netmhcpan
 Title: Interface to 'NetMHCpan'
 Version: 1.3.1
 Authors@R: c(

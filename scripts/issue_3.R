@@ -1,25 +1,25 @@
 # Update packages
-# remove.packages("netMHCpan")
+# remove.packages("netmhcpan")
 devtools::install_github("tzina97/netMHCpanW", ref = "develop")
 
 # Location of the binary tarball file.
 # SET THE CORRECT PATH HERE
-netMHCpan_bin_tarfile_path <- "netMHCpan-4.1.Linux.tar.gz"
+netMHCpan_bin_tarfile_path <- "netmhcpan-4.1.Linux.tar.gz"
 netMHCpan_data_tarfile_path <- "data.Linux.tar.gz"
-testthat::expect_true(file.exists(netMHCpan_bin_tarfile_path))
-testthat::expect_true(file.exists(netMHCpan_data_tarfile_path))
+testthat::expect_true(file.exists(netmhcpan_bin_tarfile_path))
+testthat::expect_true(file.exists(netmhcpan_data_tarfile_path))
 
 # Install binary
-install_netMHCpan_bin_from_file(
-  netMHCpan_bin_tarfile_path = netMHCpan_bin_tarfile_path
+install_netmhcpan_bin_from_file(
+  netmhcpan_bin_tarfile_path = netmhcpan_bin_tarfile_path
 )
-testthat::expect_true(is_netMHCpan_bin_installed())
+testthat::expect_true(is_netmhcpan_bin_installed())
 
 # Install data
-install_netMHCpan_data_from_file(
-  netMHCpan_data_tarfile_path = netMHCpan_data_tarfile_path
+install_netmhcpan_data_from_file(
+  netmhcpan_data_tarfile_path = netmhcpan_data_tarfile_path
 )
-testthat::expect_true(is_netMHCpan_bin_installed())
+testthat::expect_true(is_netmhcpan_bin_installed())
 
 # Use regular install function to take over the rest
-install_netMHCpan()
+install_netmhcpan()

@@ -1,6 +1,6 @@
 test_that("use", {
 
-  if (!is_netMHCpan_installed()) return()
+  if (!is_netmhcpan_installed()) return()
 
   peptides <- c("AIAACAMLLV", "ALVCYIVMPV")
   df <- predict_ic50(

@@ -7,7 +7,7 @@
 #' @examples
 #' # FASTA file in which all proteons have a length of at keast 13
 #' fasta_filename <- system.file(
-#'   "extdata", "example.fasta", package = "netMHCpan"
+#'   "extdata", "example.fasta", package = "netmhcpan"
 #' )
 #' check_fasta_file_sequence_lengths(
 #'   fasta_filename = fasta_filename,

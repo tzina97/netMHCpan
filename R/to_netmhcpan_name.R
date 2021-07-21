@@ -3,7 +3,7 @@
 #' Convert a formal MHC haplotype name to the notation used by NetMHCpan.
 #' @inheritParams default_params_doc
 #' @export
-to_netMHCpan_name <- function(mhc_haplotype) {
+to_netmhcpan_name <- function(mhc_haplotype) {
   s <- stringr::str_replace_all(
     mhc_haplotype,
     "(DQ[:upper:][:digit:])\\*",

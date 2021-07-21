@@ -4,18 +4,18 @@
 #' @inheritParams default_params_doc
 #' @export
 is_url_valid <- function(
-  netMHCpan_bin_url = get_netMHCpan_bin_url(),
+  netmhcpan_bin_url = get_netmhcpan_bin_url(),
   verbose = FALSE,
-  netMHCpan_archive_filename = get_netMHCpan_archive_filename(),
-  temp_local_file = tempfile(pattern = "netMHCpan_is_url_valid_")
+  netmhcpan_archive_filename = get_netmhcpan_archive_filename(),
+  temp_local_file = tempfile(pattern = "netmhcpan_is_url_valid_")
 ) {
   is_valid <- FALSE
   tryCatch({
       suppressWarnings(
-        check_netMHCpan_bin_url(
-          netMHCpan_bin_url = netMHCpan_bin_url,
+        check_netmhcpan_bin_url(
+          netmhcpan_bin_url = netmhcpan_bin_url,
           verbose = verbose,
-          netMHCpan_archive_filename = netMHCpan_archive_filename,
+          netmhcpan_archive_filename = netmhcpan_archive_filename,
           temp_local_file = temp_local_file
         )
       )

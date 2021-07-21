@@ -23,26 +23,26 @@ MHC haplotypes.
 First load the library:
 
 ```{r}
-library(netMHCpan)
+library(netmhcpan)
 ```
 
 This demo assumes NetMHCpan is installed.
-Installation cannot be done `netMHCpan`, as one needs
+Installation cannot be done `netmhcpan`, as one needs
 to request a download link at 
 [http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCpan/](http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCpan).
 
-To install `netMHCpan`, use `install_netMHCpan` with the download link:
+To install `netMHCpan`, use `install_netmhcpan` with the download link:
 
 ```
-install_netMHCpan(" ")
+install_netmhcpan(" ")
 ```
 
-The installation of `netMHCpan` is checked, with
+The installation of `netmhcpan` is checked, with
 the goal of producing a helpful error message:
 
 ```{r}
 tryCatch(
-  check_netMHCpan_installation(),
+  check_netmhcpan_installation(),
   error = function(e) print(e)
 )
 ```
@@ -58,8 +58,8 @@ Now, we need to select an MHC haplotype. There are many alleles,
 so first we count the number of haplotypes:
 
 ```{r}
-if (is_netMHCpan_installed()) {
-  mhc_haplotypes <- get_netMHCpan_alleles()
+if (is_netmhcpan_installed()) {
+  mhc_haplotypes <- get_netmhcpan_alleles()
   length(mhc_haplotypes)
 }
 ```
@@ -67,7 +67,7 @@ if (is_netMHCpan_installed()) {
 Now, we simply pick the first haplotype:
 
 ```{r}
-if (is_netMHCpan_installed()) {
+if (is_netmhcpan_installed()) {
   mhc_haplotype <- mhc_haplotypes[1]
 }
 ```
@@ -77,7 +77,7 @@ value in nanomolars (nM), of which lower values indicate stronger
 binders:
 
 ```{r}
-if (is_netMHCpan_installed()) {
+if (is_netmhcpan_installed()) {
   knitr::kable(
     predict_ic50(
       peptides = sequence,
@@ -93,7 +93,7 @@ As the MHC-II molecules prefers 13 amino acids residues,
 we can get the IC50 values for each residue as such:
 
 ```{r}
-if (is_netMHCpan_installed()) {
+if (is_netmhcpan_installed()) {
   knitr::kable(
     predict_ic50s(
       protein_sequence = "AVLWAGVAFLAFLQLTALVLNLL",

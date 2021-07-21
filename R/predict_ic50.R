@@ -13,7 +13,7 @@
 #' (2) \code{ic50}, which holds the predicted IC50
 #' @inheritParams default_params_doc
 #' @examples
-#' if (is_netMHCpan_installed()) {
+#' if (is_netmhcpan_installed()) {
 #'
 #'   predict_ic50(
 #'     peptides = c("AIAACAMLLV", "ALVCYIVMPV"),
@@ -25,9 +25,9 @@
 predict_ic50 <- function(
   peptides,
   mhc_haplotype,
-  netMHCpan_folder_name = get_default_netMHCpan_folder(),
-  temp_fasta_filename = netMHCpan::create_temp_fasta_filename(),
-  temp_xls_filename = netMHCpan::create_temp_xls_filename()
+  netmhcpan_folder_name = get_default_netmhcpan_folder(),
+  temp_fasta_filename = netmhcpan::create_temp_fasta_filename(),
+  temp_xls_filename = netmhcpan::create_temp_xls_filename()
 ) {
   if (any(nchar(peptides) > 15)) {
     stop(
@@ -41,11 +41,11 @@ predict_ic50 <- function(
   )
   n_peptides <- length(peptides)
   for (i in seq_len(n_peptides)) {
-    t$ic50[i] <- netMHCpan::predict_ic50s(
+    t$ic50[i] <- netmhcpan::predict_ic50s(
       protein_sequence = peptides[i],
       peptide_length = nchar(peptides[i]),
       mhc_haplotype = mhc_haplotype,
-      netMHCpan_folder_name = netMHCpan_folder_name,
+      netmhcpan_folder_name = netmhcpan_folder_name,
       temp_fasta_filename = temp_fasta_filename,
       temp_xls_filename = temp_xls_filename
     )$ic50

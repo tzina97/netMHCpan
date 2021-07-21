@@ -4,15 +4,15 @@
 #'   FALSE otherwise
 #' @author Richèl J.C. Bilderbeek
 #' @export
-is_netMHCpan_installed <- function(
-  netMHCpan_folder_name = get_default_netMHCpan_folder(),
+is_netmhcpan_installed <- function(
+  netmhcpan_folder_name = get_default_netmhcpan_folder(),
   verbose = FALSE
 ) {
   assertive::is_if_condition(verbose)
   is_installed <- FALSE
   tryCatch({
-    netMHCpan::check_netMHCpan_installation(
-      netMHCpan_folder_name = netMHCpan_folder_name
+    netmhcpan::check_netmhcpan_installation(
+      netmhcpan_folder_name = netmhcpan_folder_name
     )
     is_installed <- TRUE
   }, error = function(e) {
@@ -30,14 +30,14 @@ is_netMHCpan_installed <- function(
 #'   FALSE otherwise
 #' @author Richèl J.C. Bilderbeek
 #' @export
-is_netMHCpan_bin_installed <- function(
-  netMHCpan_folder_name = get_default_netMHCpan_folder(),
+is_netmhcpan_bin_installed <- function(
+  netmhcpan_folder_name = get_default_netmhcpan_folder(),
   verbose = FALSE
 ) {
   bin_file_path <- file.path(
-    netMHCpan_folder_name,
-    basename(get_default_netMHCpan_subfolder()),
-    basename(get_default_netMHCpan_bin_path())
+    netmhcpan_folder_name,
+    basename(get_default_netmhcpan_subfolder()),
+    basename(get_default_netmhcpan_bin_path())
   )
   if (verbose) message("bin_file_path: '", bin_file_path, "'")
   file.exists(bin_file_path)
@@ -49,12 +49,12 @@ is_netMHCpan_bin_installed <- function(
 #'   FALSE otherwise
 #' @author Richèl J.C. Bilderbeek
 #' @export
-is_netMHCpan_data_installed <- function(
-  netMHCpan_folder_name = get_default_netMHCpan_folder()
+is_netmhcpan_data_installed <- function(
+  netmhcpan_folder_name = get_default_netmhcpan_folder()
 ) {
   data_file_path <- file.path(
-    netMHCpan_folder_name,
-    basename(get_default_netMHCpan_subfolder()),
+    netmhcpan_folder_name,
+    basename(get_default_netmhcpan_subfolder()),
     "data"
   )
   file.exists(data_file_path)
@@ -66,13 +66,13 @@ is_netMHCpan_data_installed <- function(
 #'   FALSE otherwise
 #' @author Richèl J.C. Bilderbeek
 #' @export
-is_netMHCpan_set_up <- function(
-  netMHCpan_folder_name = get_default_netMHCpan_folder()
+is_netmhcpan_set_up <- function(
+  netmhcpan_folder_name = get_default_netmhcpan_folder()
 ) {
   file_path <- file.path(
-    netMHCpan_folder_name,
-    basename(get_default_netMHCpan_subfolder()),
-    basename(get_default_netMHCpan_bin_path())
+    netmhcpan_folder_name,
+    basename(get_default_netmhcpan_subfolder()),
+    basename(get_default_netmhcpan_bin_path())
   )
   if (!file.exists(file_path)) return(FALSE)
   # lines <- readLines(file_path)
@@ -81,7 +81,7 @@ is_netMHCpan_set_up <- function(
   #     x = lines,
   #     pattern = paste0(
   #       "/usr/cbs/bio/src/",  # nolint file does use absolute path
-  #       basename(get_default_netMHCpan_subfolder())
+  #       basename(get_default_netmhcpan_subfolder())
   #     )
   #   )
   # )

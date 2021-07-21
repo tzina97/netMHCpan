@@ -1,5 +1,5 @@
 test_that("use", {
-  if (!is_netMHCpan_installed()) return()
+  if (!is_netmhcpan_installed()) return()
   protein_sequence <- "FANTASTICALLY"
   peptide_length <- 13
   temp_fasta_filename <- tempfile()

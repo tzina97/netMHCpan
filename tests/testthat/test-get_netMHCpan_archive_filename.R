@@ -1,7 +1,7 @@
 test_that("use", {
-  netMHCpan_version <- get_default_netMHCpan_version()
+  netmhcpan_version <- get_default_netmhcpan_version()
   expect_equal(
-    get_netMHCpan_archive_filename(),
-    paste0("netMHCpan-", netMHCpan_version, "b.Linux.tar.gz")
+    get_netmhcpan_archive_filename(),
+    paste0("netMHCpan-", netmhcpan_version, "b.Linux.tar.gz")
   )
 })
