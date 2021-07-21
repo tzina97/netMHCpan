@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Installs NetMHCpan using the R code in the 'netmhcpan' package
+# Installs NetMHCpan using the R code in the 'netmhcpan' package.
 #
 # Because the R code in the package uses 'netmhcpan::' in calling
 # its functions, this script removes these prefixes.
