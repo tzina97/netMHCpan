@@ -18,25 +18,21 @@ get_netmhcpan_alleles <- function(
     basename(get_default_netmhcpan_bin_path())
   )
   testit::assert(file.exists(bin_file_path))
-  alleles <- system2(
-    command = bin_file_path,
-    args = c("-list"),
+  alleles_with_comments <- system2(
+    command = normalizePath(bin_file_path),
+    args = c("-listMHC"),
     stdout = TRUE
   )
 
-  # Remove the tab-duplicated alleles
-  #
-  # Find the duplicate indices, verify the name
-  # before and after tab is exactly the same
-  duplicate_indices <- which(
-    stringr::str_count(alleles, pattern = "\t") != 0
+  # Get all the lines that do not start with a hashatg
+  alleles_without_comments <- stringr::str_subset(
+    string = alleles_with_comments,
+    pattern = "^#",
+    negate = TRUE
   )
-  for (i in duplicate_indices) {
-    duplicate_allele <- alleles[i]
-    s <- stringr::str_split(duplicate_allele, pattern = "\t")[[1]]
-    testthat::expect_equal(s[1], s[2])
-    alleles[i] <- s[1]
-  }
-
+  alleles <- stringr::str_subset(
+    string = alleles_without_comments,
+    pattern = "[:alnum:]+"
+  )
   alleles
 }
