@@ -1,43 +1,43 @@
-# netmhc2pan
+# netmhcpan
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/netmhc2pan)](https://cran.r-project.org/package=netmhc2pan)
 [![](http://cranlogs.r-pkg.org/badges/grand-total/netmhc2pan)]( https://CRAN.R-project.org/package=netmhc2pan)
 [![](http://cranlogs.r-pkg.org/badges/netmhc2pan)](https://CRAN.R-project.org/package=netmhc2pan)
 
-Branch   |[GitHub Actions](https://github.com/richelbilderbeek/netmhc2pan/actions)                                     |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.com)                                                                             |[![Codecov logo](pics/Codecov.png)](https://www.codecov.io)
+Branch   |[GitHub Actions](https://github.com/tzina97/netMHCpan/actions)                                     |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.com)                                                                             |[![Codecov logo](pics/Codecov.png)](https://www.codecov.io)
 ---------|-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 `master` |![R-CMD-check](https://github.com/richelbilderbeek/netmhc2pan/workflows/R-CMD-check/badge.svg?branch=master) |[![Build Status](https://travis-ci.com/richelbilderbeek/netmhc2pan.svg?branch=master)](https://travis-ci.com/richelbilderbeek/netmhc2pan) |[![codecov.io](https://codecov.io/github/richelbilderbeek/netmhc2pan/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/netmhc2pan/branch/master)
 `develop`|![R-CMD-check](https://github.com/richelbilderbeek/netmhc2pan/workflows/R-CMD-check/badge.svg?branch=develop)|[![Build Status](https://travis-ci.com/richelbilderbeek/netmhc2pan.svg?branch=develop)](https://travis-ci.com/richelbilderbeek/netmhc2pan)|[![codecov.io](https://codecov.io/github/richelbilderbeek/netmhc2pan/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/netmhc2pan/branch/develop)
 
-R package for [NetMHCIIpan](https://services.healthtech.dtu.dk/service.php?NetMHCIIpan-3.2) [1].
+R package for [NetMHCpan](https://services.healthtech.dtu.dk/service.php?NetMHCpan-4.1/) [1].
 
 > Please note that this page is intended for academic users only. Other users are requested
 > to contact the Software Package Manager at health-software@dtu.dk
 
- * [YouTube video](https://youtu.be/08A_kf4v2UA) or [download video](http://richelbilderbeek.nl/netmhc2pan.ogv)
+ 
 
 ## Install
 
-Use `usethis` (or `devtools`) to install the `netmhc2pan` package:
+Use `usethis` (or `devtools`) to install the `netmhcpan` package:
 
 ```{r}
-usethis::install_github("richelbilderbeek/netmhc2pan")
+usethis::install_github("tzina97/netMHCpan")
 ```
 
-Load the `netmhc2pan` library:
+Load the `netmhcpan` library:
 
 ```{r}
-library(netmhc2pan)
+library(netmhcpan)
 ```
 
-Install NetMHCIIpan to a default folder using `netmhc2pan` and a download URL.
+Install NetMHCpan to a default folder using `netmhcpan` and a download URL.
 The download URL can be obtained from the 
-NetMHCIIpan website at
-[https://services.healthtech.dtu.dk/service.php?NetMHCIIpan-3.2](https://services.healthtech.dtu.dk/service.php?NetMHCIIpan-3.2)
+NetMHCpan website at
+[https://services.healthtech.dtu.dk/service.php?NetMHCpan-4.1/](https://services.healthtech.dtu.dk/service.php?NetMHCpan-4.1/)
 and expires after four hours.
 
 ```{r}
-install_netmhc2pan("https://services.healthtech.dtu.dk/download/fb4dee93-ddbb-4639-ab21-45fdfd0ed23e")
+install_netmhcpan("UPDATE LINK")
 ```
 
 ### Installation troubleshooting
@@ -46,34 +46,34 @@ install_netmhc2pan("https://services.healthtech.dtu.dk/download/fb4dee93-ddbb-46
 
 Request a new download link
 
-#### `cannot open URL 'https://services.healthtech.dtu.dk/download/[number]/netMHCIIpan-3.2.Linux.tar.gz'`
+#### `cannot open URL 'https://services.healthtech.dtu.dk/download/[number]/netMHCpan-4.1.Linux.tar.gz'`
 
 From a fresh download link, you *can* download the file, 
-yet not install using the `install_netmhc2pan` function.
+yet not install using the `install_netmhcpan` function.
 
-In that case, use the `install_netmhc2pan_bin_from_file` function:
+In that case, use the `install_netmhcpan_bin_from_file` function:
  
 ```
-install_netmhc2pan_bin_from_file("netMHCIIpan-3.2.Linux.tar.gz")
+install_netmhcpan_bin_from_file("netMHCpan-4.1.Linux.tar.gz")
 ```
 
-This function assumes that the file `netMHCIIpan-3.2.Linux.tar.gz` is in the working
+This function assumes that the file `netMHCpan-4.1.Linux.tar.gz` is in the working
 directory.
 
 After this, install like normal:
 
 ```
-install_netmhc2pan()
+install_netmhcpan()
 ```
 
-#### `cannot open URL 'https://www.cbs.dtu.dk/services/NetMHCIIpan-3.2/data.Linux.tar.gz'`
+#### `cannot open URL 'https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz'`
 
 This happens when the university website is down (yes, this has happened!).
 
-In that case, use the `install_netmhc2pan_data_from_file` function:
+In that case, use the `install_netmhcpan_data_from_file` function:
  
 ```
-install_netmhc2pan_data_from_file("data.Linux.tar.gz")
+install_netmhcpan_data_from_file("data.Linux.tar.gz")
 ```
 
 This function assumes that the file `data.Linux.tar.gz` is in the working
@@ -82,7 +82,7 @@ directory.
 After this, install like normal:
 
 ```
-install_netmhc2pan()
+install_netmhcpan()
 ```
 
 ## Usage
@@ -91,7 +91,7 @@ We start from a FASTA file with one or more protein sequences:
 
 ```{r}
 fasta_filename <- system.file(
-  "extdata", "example.fasta", package = "netmhc2pan"
+  "extdata", "example.fasta", package = "netmhcpan"
 )
 ```
 
@@ -110,7 +110,7 @@ MHC2 has multiple alleles that bind differently to protein parts.
 NetMHCIIpan supports more than 5000 alleles:
 
 ```{r}
-all_alleles <- get_netmhc2pan_alleles()
+all_alleles <- get_netmhcpan_alleles()
 testit::assert(length(all_alleles) > 5000)
 ```
 
@@ -120,10 +120,10 @@ We simply pick the first two alleles:
 alleles <- all_alleles[1:2]
 ```
 
-Running the NetMHCIIpan analysis: 
+Running the NetMHCpan analysis: 
 
 ```{r}
-bindings <- run_netmhc2pan(
+bindings <- run_netmhcpan(
   fasta_filename = fasta_filename,
   alleles = alleles
 )
@@ -156,18 +156,18 @@ knitr::kable(bindings)
 |   8|AFLAFLQLTALVLNL |sp&#124;L0T550&#124;RIP2_MYCTU_158_180 |DRB1_0102 |            0.456|  361.54| 11.0|
 |   9|FLAFLQLTALVLNLL |sp&#124;L0T550&#124;RIP2_MYCTU_158_180 |DRB1_0102 |            0.442|  420.88| 14.0|
 
-The strongest binding is between the MHC2 allele `DRB1_0101`
+The strongest binding is between the MHC allele `DRB1_0101`
 at the 7th (to and including 21st) amino acid of the `sp&#124;L0T550&#124;RIP2_MYCTU_158_180`
 protein, as it is in the top 6.5% of best binders.
 
 ## FAQ
 
-### Under which operating systems does `netmhc2pan` work?
+### Under which operating systems does `netmhcpan` work?
 
-`netmhc2pan` can only work on the set of operating systems NetMHCIIpan
+`netmhcpan` can only work on the set of operating systems NetMHCpan
 works on. Currently, only Linux is supported:
 
-Operating system|Supported by NetMHCIIpan|Supported by `netmhc2pan`
+Operating system|Supported by NetMHCpan|Supported by `netmhcpan`
 ----------------|------------------------|-------------------------
 Darwin          |Y                       |N
 Linux           |Y                       |Y
@@ -194,7 +194,5 @@ These are the ones I use:
 
 ## References
 
- * [1] Improved methods for predicting peptide binding affinity to MHC class II molecules.
-   Jensen KK, Andreatta M, Marcatili P, Buus S, Greenbaum JA, Yan Z, Sette A, Peters B, Nielsen M.
-   Immunology. 2018 Jan 6. doi: 10.1111/imm.12889.
-   PubMed: [29315598](http://www.ncbi.nlm.nih.gov/pubmed/29315598)
+   * [1] Jurtz, Vanessa et al. “NetMHCpan-4.0: Improved Peptide-MHC Class I Interaction Predictions Integrating       Eluted Ligand and Peptide Binding Affinity Data.” Journal of immunology (Baltimore, Md. : 1950) vol. 199,9 (2017):   3360-3368. doi:10.4049/jimmunol.1700893
+   PubMed: [28978689](https://pubmed.ncbi.nlm.nih.gov/28978689/)

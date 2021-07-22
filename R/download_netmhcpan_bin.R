@@ -62,7 +62,7 @@ download_netmhcpan_bin <- function(
         "Request a download URL at the NetMHCpan request page at\n",
         "\n",
         paste0(
-          "http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCpan",
+          "https://services.healthtech.dtu.dk/cgi-bin/sw_request",
           netmhcpan_version,
           "\n"
         ),
