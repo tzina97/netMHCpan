@@ -8,5 +8,5 @@
 get_default_netmhcpan_bin_path <- function( # nolint indeed a long name, I keep it for the sake of readability
   netmhcpan_subfolder = get_default_netmhcpan_subfolder()
 ) {
-  file.path(netmhcpan_subfolder, "netmhcpan")
+  file.path(netmhcpan_subfolder, "netMHCpan")
 }
