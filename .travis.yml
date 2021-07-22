@@ -44,7 +44,7 @@ after_success:
   - wget https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf
 
 after_failure:
-  - Rscript -e 'remotes::install_github("tzina97/netMHCpanW")'
+  - Rscript -e 'remotes::install_github("tzina97/netMHCpan")'
   - Rscript -e 'netmhcpan::netmhcpan_report()'
   - ls
   # Download thesis

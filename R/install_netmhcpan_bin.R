@@ -22,7 +22,7 @@ install_netmhcpan_bin <- function(
     basename(get_default_netmhcpan_bin_path())
   )
   if (file.exists(bin_path)) {
-    return ("NetMHCpan binary is already installed")
+    return("NetMHCpan binary is already installed")
   }
 
   netmhcpan_bin_tarfile_path <- file.path(

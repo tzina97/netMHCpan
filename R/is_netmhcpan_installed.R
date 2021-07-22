@@ -75,16 +75,16 @@ is_netmhcpan_set_up <- function(
     basename(get_default_netmhcpan_bin_path())
   )
   if (!file.exists(file_path)) return(FALSE)
-  # lines <- readLines(file_path)
-  # !any(
-  #   grepl(
-  #     x = lines,
-  #     pattern = paste0(
-  #       "/usr/cbs/bio/src/",  # nolint file does use absolute path
-  #       basename(get_default_netmhcpan_subfolder())
-  #     )
-  #   )
-  # )
+  lines <- readLines(file_path)
+  !any(
+    grepl(
+      x = lines,
+      pattern = paste0(
+        "/usr/cbs/bio/src/",  # nolint file does use absolute path
+        basename(get_default_netmhcpan_subfolder())
+      )
+    )
+  )
   TRUE
 }
 

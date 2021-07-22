@@ -1,12 +1,12 @@
 #' This function does nothing. It is intended to inherit is parameters'
 #' documentation.
-#' @param alleles one or more alleles, e.g. \code{DRB1_0101}.
+#' @param alleles one or more alleles, e.g. \code{HLA-A0101}.
 #'   See \link{get_netmhcpan_alleles} for a full list
 #' @param do_filter set to TRUE if the results of NetMHCpan must be filtered
 #' @param fasta_filename the name of a FASTA file with protein sequences
 #' @param folder_name the folder to install NetMHCpan, which is
 #'   \code{"/home/[usename]/.local/share"} by default
-#' @param mhc_haplotype one MHC haplotype, e.g. \code{DRB1_0101}.
+#' @param mhc_haplotype one MHC haplotype, e.g. \code{HLA-A0101}.
 #'   See \link{get_netmhcpan_alleles} for a full list
 #' @param netmhcpan_archive_filename the NetMHCpan archive
 #'   filename, for example \code{netMHCpan-4.1b.Linux.tar.gz},
@@ -24,7 +24,7 @@
 #' @param netmhcpan_data_url URL to download the
 #'   NetMHCpan data tarball file from,
 #'   similar to, for example,
-#'   \url{https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz}.
+#'   \url{https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz}
 #'   Use \link{get_netmhcpan_data_url} to get the default URL.
 #' @param netmhcpan_folder_name the folder (to be) used by NetMHCpan.
 #'   From this location, a subfolder for NetMHCpan is created.

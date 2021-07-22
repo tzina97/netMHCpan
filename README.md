@@ -6,8 +6,8 @@
 
 Branch   |[GitHub Actions](https://github.com/tzina97/netMHCpan/actions)                                     |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.com)                                                                             |[![Codecov logo](pics/Codecov.png)](https://www.codecov.io)
 ---------|-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-`master` |![R-CMD-check](https://github.com/richelbilderbeek/netmhc2pan/workflows/R-CMD-check/badge.svg?branch=master) |[![Build Status](https://travis-ci.com/richelbilderbeek/netmhc2pan.svg?branch=master)](https://travis-ci.com/richelbilderbeek/netmhc2pan) |[![codecov.io](https://codecov.io/github/richelbilderbeek/netmhc2pan/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/netmhc2pan/branch/master)
-`develop`|![R-CMD-check](https://github.com/richelbilderbeek/netmhc2pan/workflows/R-CMD-check/badge.svg?branch=develop)|[![Build Status](https://travis-ci.com/richelbilderbeek/netmhc2pan.svg?branch=develop)](https://travis-ci.com/richelbilderbeek/netmhc2pan)|[![codecov.io](https://codecov.io/github/richelbilderbeek/netmhc2pan/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/netmhc2pan/branch/develop)
+`master` |![R-CMD-check](https://github.com/tzina97/netMHCpan/workflows/R-CMD-check/badge.svg?branch=master) |[![Build Status](https://travis-ci.com/tzina97/netMHCpan.svg?branch=master)](https://travis-ci.com/tzina97/netMHCpan) |[![codecov.io](https://codecov.io/gh/tzina97/netMHCpan/branch/main/graph/badge.svg?token=xd9GaYUbPB)](https://codecov.io/gh/tzina97/netMHCpan)
+`develop`|![R-CMD-check](https://github.com/tzina97/netMHCpan/workflows/R-CMD-check/badge.svg?branch=develop)|[![Build Status](https://travis-ci.com/tzina97/netMHCpan.svg?branch=develop)](https://travis-ci.com/tzina97/netMHCpan)|[![codecov.io](https://codecov.io/gh/tzina97/netMHCpan/branch/main/graph/badge.svg?token=xd9GaYUbPB)](https://codecov.io/gh/tzina97/netMHCpan)
 
 R package for [NetMHCpan](https://services.healthtech.dtu.dk/service.php?NetMHCpan-4.1/) [1].
 
@@ -173,15 +173,6 @@ Darwin          |Y                       |N
 Linux           |Y                       |Y
 Windows         |N                       |N
 
-### How to solve `Can't locate Env.pm in @INC`?
-
-Install the Perl `Env` package with:
-
-```
-/usr/bin/perl -MCPAN -e 'install Env'
-```
-
-See notes at [this Issue](https://github.com/richelbilderbeek/netmhc2pan/issues/1).
 
 ### Are there similar packages?
 

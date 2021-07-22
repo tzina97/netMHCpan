@@ -24,7 +24,7 @@ install_netmhcpan_bin_from_file <- function( # nolint indeed a long function nam
   )
 
   if (file.exists(bin_path)) {
-    stop ("NetMHCpan binary is already installed")
+    stop("NetMHCpan binary is already installed")
   }
 
   dir.create(

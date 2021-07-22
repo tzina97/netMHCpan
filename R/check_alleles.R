@@ -11,8 +11,8 @@
 #' @author Richèl J.C. Bilderbeek
 #' @examples
 #' if (is_netmhcpan_installed()) {
-#'   check_alleles("DRB1_0101")
-#'   check_alleles(c("DRB1_0102", "DRB1_0103"))
+#'   check_alleles("HLA-A0101")
+#'   check_alleles(c("HLA-A0102", "HLA-A0103"))
 #' }
 #' @export
 check_alleles <- function(
