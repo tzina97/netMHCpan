@@ -13,7 +13,6 @@ matrix:
 r_packages:
   - devtools
   - hunspell
-  - covr
 
 r_github_packages:
   - jimhester/covr
@@ -41,7 +40,6 @@ after_success:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then if [[ $(egrep -R "\"~" --include={*.R,*.Rmd}) ]]; then echo "Local file created"; exit 1; fi; fi
   - Rscript -e 'netmhcpan::netmhcpan_report()'
   - Rscript scripts/issue_3.R
-  - Rscript -e 'library(covr); codecov()'
   # Download thesis
   - wget https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf
 

@@ -10,7 +10,7 @@
 #'   run_netmhcpan(fasta_filename)
 #'
 #'   # Two alleles
-#'   alleles <- c("DRB1_0101", "DRB1_0102")
+#'   alleles <- c("HLA-A0101", "HLA-A0102")
 #'   # Run NetMHCpan with these two alleles
 #'   run_netmhcpan(fasta_filename, alleles = alleles)
 #' }
@@ -18,7 +18,7 @@
 #' @export
 run_netmhcpan <- function(
   fasta_filename,
-  alleles = "DRB1_0101",
+  alleles = "HLA-A0101",
   peptide_length = 15,
   netmhcpan_folder_name = get_default_netmhcpan_folder(),
   temp_xls_filename = netmhcpan::create_temp_xls_filename()

@@ -1,6 +1,6 @@
 # Update packages
 # remove.packages("netmhcpan")
-devtools::install_github("tzina97/netMHCpanW", ref = "develop")
+devtools::install_github("tzina97/netMHCpan", ref = "develop")
 
 # Location of the binary tarball file.
 # SET THE CORRECT PATH HERE

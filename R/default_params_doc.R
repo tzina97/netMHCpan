@@ -1,12 +1,12 @@
 #' This function does nothing. It is intended to inherit is parameters'
 #' documentation.
-#' @param alleles one or more alleles, e.g. \code{DRB1_0101}.
+#' @param alleles one or more alleles, e.g. \code{HLA-A0101}.
 #'   See \link{get_netmhcpan_alleles} for a full list
 #' @param do_filter set to TRUE if the results of NetMHCpan must be filtered
 #' @param fasta_filename the name of a FASTA file with protein sequences
 #' @param folder_name the folder to install NetMHCpan, which is
 #'   \code{"/home/[usename]/.local/share"} by default
-#' @param mhc_haplotype one MHC haplotype, e.g. \code{DRB1_0101}.
+#' @param mhc_haplotype one MHC haplotype, e.g. \code{HLA-A0101}.
 #'   See \link{get_netmhcpan_alleles} for a full list
 #' @param netmhcpan_archive_filename the NetMHCpan archive
 #'   filename, for example \code{netMHCpan-4.1b.Linux.tar.gz},
