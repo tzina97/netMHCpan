@@ -9,6 +9,7 @@ name: R-CMD-check
 jobs:
   R-CMD-check:
     strategy:
+      fail-fast: false
       matrix:
         include:
           - install_netmhcpan: "true"
