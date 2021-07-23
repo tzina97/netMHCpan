@@ -38,30 +38,12 @@ jobs:
           remotes::install_github("MangoTheCat/goodpractice")
         shell: Rscript {0}
 
-      - name: Show NETMHCPAN
-        env:
-          INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
-        run: echo "$INSTALL_NETMHCPAN"
-
-      - name: If statement on NETMHCPAN is true
-        env:
-          INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
-        run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then echo "Yay!"; fi
-
-      - name: Show location
-        run: pwd
-
-      - name: If statement on NETMHCPAN is false
-        env:
-          INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
-        run: if [[ "$INSTALL_NETMHCPAN" == false ]]; then echo "Nay!"; fi
-
-      - name: Show NETMHCPAN install script
+      - name: Show netMHCpan install script
         env:
           INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
         run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then cat scripts/install_netmhcpan.sh; fi
 
-      - name: Install NETMHCPAN
+      - name: Install netMHCpan
         env:
           INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
         run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then ./scripts/install_netmhcpan.sh; fi
@@ -71,9 +53,13 @@ jobs:
         shell: Rscript {0}
 
       - name: Test coverage
+        env:
+          INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
         run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then Rscript -e 'covr::codecov()'; fi
 
       - name: Lint
+        env:
+          INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
         run: if [[ "$INSTALL_NETMHCPAN" == false ]]; then Rscript -e 'lintr::lint_package()'; fi
 
       - name: Report
