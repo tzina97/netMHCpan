@@ -15,7 +15,7 @@ predict_ic50(
 \arguments{
 \item{peptides}{one or more peptide sequences}
 
-\item{mhc_haplotype}{one MHC haplotype, e.g. \code{DRB1_0101}.
+\item{mhc_haplotype}{one MHC haplotype, e.g. \code{HLA-A0101}.
 See \link{get_netmhcpan_alleles} for a full list}
 
 \item{netmhcpan_folder_name}{the folder (to be) used by NetMHCpan.
@@ -53,7 +53,7 @@ if (is_netmhcpan_installed()) {
 
   predict_ic50(
     peptides = c("AIAACAMLLV", "ALVCYIVMPV"),
-    mhc_haplotype = "DRB1_0416"
+    mhc_haplotype = "HLA-A0101"
   )
 }
 }

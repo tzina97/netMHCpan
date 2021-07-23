@@ -18,7 +18,7 @@ predict_ic50s(
 
 \item{peptide_length}{length of a peptide}
 
-\item{mhc_haplotype}{one MHC haplotype, e.g. \code{DRB1_0101}.
+\item{mhc_haplotype}{one MHC haplotype, e.g. \code{HLA-A0101}.
 See \link{get_netmhcpan_alleles} for a full list}
 
 \item{netmhcpan_folder_name}{the folder (to be) used by NetMHCpan.

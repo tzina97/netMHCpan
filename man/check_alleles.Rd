@@ -7,7 +7,7 @@
 check_alleles(alleles, netmhcpan_folder_name = get_default_netmhcpan_folder())
 }
 \arguments{
-\item{alleles}{one or more alleles, e.g. \code{DRB1_0101}.
+\item{alleles}{one or more alleles, e.g. \code{HLA-A0101}.
 See \link{get_netmhcpan_alleles} for a full list}
 
 \item{netmhcpan_folder_name}{the folder (to be) used by NetMHCpan.
@@ -26,8 +26,8 @@ Will \link{stop} if not.
 }
 \examples{
 if (is_netmhcpan_installed()) {
-  check_alleles("DRB1_0101")
-  check_alleles(c("DRB1_0102", "DRB1_0103"))
+  check_alleles("HLA-A0101")
+  check_alleles(c("HLA-A0102", "HLA-A0103"))
 }
 }
 \seealso{

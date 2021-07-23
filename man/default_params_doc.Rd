@@ -31,7 +31,7 @@ default_params_doc(
 )
 }
 \arguments{
-\item{alleles}{one or more alleles, e.g. \code{DRB1_0101}.
+\item{alleles}{one or more alleles, e.g. \code{HLA-A0101}.
 See \link{get_netmhcpan_alleles} for a full list}
 
 \item{do_filter}{set to TRUE if the results of NetMHCpan must be filtered}
@@ -41,7 +41,7 @@ See \link{get_netmhcpan_alleles} for a full list}
 \item{folder_name}{the folder to install NetMHCpan, which is
 \code{"/home/[usename]/.local/share"} by default}
 
-\item{mhc_haplotype}{one MHC haplotype, e.g. \code{DRB1_0101}.
+\item{mhc_haplotype}{one MHC haplotype, e.g. \code{HLA-A0101}.
 See \link{get_netmhcpan_alleles} for a full list}
 
 \item{netmhcpan_archive_filename}{the NetMHCpan archive
@@ -64,7 +64,7 @@ NetMHCpan data tarball file}
 \item{netmhcpan_data_url}{URL to download the
 NetMHCpan data tarball file from,
 similar to, for example,
-\url{https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz}.
+\url{https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz}
 Use \link{get_netmhcpan_data_url} to get the default URL.}
 
 \item{netmhcpan_folder_name}{the folder (to be) used by NetMHCpan.

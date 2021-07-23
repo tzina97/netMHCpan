@@ -7,7 +7,7 @@
 to_netmhcpan_name(mhc_haplotype)
 }
 \arguments{
-\item{mhc_haplotype}{one MHC haplotype, e.g. \code{DRB1_0101}.
+\item{mhc_haplotype}{one MHC haplotype, e.g. \code{HLA-A0101}.
 See \link{get_netmhcpan_alleles} for a full list}
 }
 \description{

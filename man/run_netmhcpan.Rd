@@ -6,7 +6,7 @@
 \usage{
 run_netmhcpan(
   fasta_filename,
-  alleles = "DRB1_0101",
+  alleles = "HLA-A0101",
   peptide_length = 15,
   netmhcpan_folder_name = get_default_netmhcpan_folder(),
   temp_xls_filename = netmhcpan::create_temp_xls_filename()
@@ -15,7 +15,7 @@ run_netmhcpan(
 \arguments{
 \item{fasta_filename}{the name of a FASTA file with protein sequences}
 
-\item{alleles}{one or more alleles, e.g. \code{DRB1_0101}.
+\item{alleles}{one or more alleles, e.g. \code{HLA-A0101}.
 See \link{get_netmhcpan_alleles} for a full list}
 
 \item{peptide_length}{length of a peptide}
@@ -45,7 +45,7 @@ if (is_netmhcpan_installed()) {
   run_netmhcpan(fasta_filename)
 
   # Two alleles
-  alleles <- c("DRB1_0101", "DRB1_0102")
+  alleles <- c("HLA-A0101", "HLA-A0102")
   # Run NetMHCpan with these two alleles
   run_netmhcpan(fasta_filename, alleles = alleles)
 }

@@ -17,7 +17,7 @@ if (is_netmhcpan_installed()) {
 
   predict_ic50(
     peptides = c("AIAACAMLLV", "ALVCYIVMPV"),
-    mhc_haplotype = "DRB1_0416"
+    mhc_haplotype = "HLA-A0101"
   )
 }
 }

@@ -14,7 +14,7 @@ install_netmhcpan_data(
 \item{netmhcpan_data_url}{URL to download the
 NetMHCpan data tarball file from,
 similar to, for example,
-\url{https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz}.
+\url{https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz}
 Use \link{get_netmhcpan_data_url} to get the default URL.}
 
 \item{netmhcpan_folder_name}{the folder (to be) used by NetMHCpan.
