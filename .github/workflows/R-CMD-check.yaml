@@ -62,6 +62,9 @@ jobs:
           INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
         run: if [[ "$INSTALL_NETMHCPAN" == false ]]; then Rscript -e 'lintr::lint_package()'; fi
 
+      - name: Install package
+        run: Rscript -e 'remotes::install_github("tzina97/netMHCpan")'
+
       - name: Report
         run: Rscript -e 'netmhcpan::netmhcpan_report()'
 
