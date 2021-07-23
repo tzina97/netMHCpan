@@ -12,7 +12,7 @@
 #
 cat R/*.R > tempscript.R
 echo "install_netmhcpan()" >> tempscript.R
-echo "if (!is_netmhcpan_installed()) quit(314)" >> tempscript.R
+echo "if (!is_netmhcpan_installed()) return(314)" >> tempscript.R
 #echo "testthat::expect_true(is_netmhcpan_installed())" >> tempscript.R
 sed -i'.orginal' "s/netmhcpan:://g" tempscript.R
 cat tempscript.R
