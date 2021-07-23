@@ -12,6 +12,8 @@
 #
 cat R/*.R > tempscript.R
 echo "install_netmhcpan()" >> tempscript.R
+echo "is_netmhcpan_installed()" >> tempscript.R
+echo "print(is_netmhcpan_installed())" >> tempscript.R
 sed -i'.orginal' "s/netmhcpan:://g" tempscript.R
 cat tempscript.R
 Rscript tempscript.R
