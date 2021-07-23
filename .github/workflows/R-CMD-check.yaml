@@ -65,3 +65,8 @@ jobs:
       - name: Report
         run: Rscript -e 'netmhcpan::netmhcpan_report()'
 
+      - name: Self-test
+        env:
+          INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
+        run: if [[ "$INSTALL_NETMHCPAN" == false ]]; then Rscript -e 'netmhcpan::netmhcpan_self_test()'; fi
+
