@@ -11,10 +11,10 @@ jobs:
     strategy:
       matrix:
         include:
-          - INSTALL_NETMHCPAN: "true"
-          - INSTALL_NETMHCPAN: "false"
+          - install_netmhcpan: "true"
+          - install_netmhcpan: "false"
 
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
