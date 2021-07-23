@@ -11,8 +11,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - install_netmhcpan: "true"
-          - install_netmhcpan: "false"
+          - INSTALL_NETMHCPAN: "true"
+          - INSTALL_NETMHCPAN: "false"
 
     runs-on: ubuntu-18.04
     env:
