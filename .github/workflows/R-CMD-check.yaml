@@ -76,3 +76,6 @@ jobs:
       - name: Lint
         run: if [[ "$INSTALL_NETMHCPAN" == false ]]; then Rscript -e 'lintr::lint_package()'; fi
 
+      - name: Report
+        run: Rscript -e 'netmhcpan::netmhcpan_report()'
+
