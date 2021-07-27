@@ -7,7 +7,7 @@ test_that("use", {
   temp_xls_filename <- tempfile()
   df <- run_netMHCpan(
     fasta_filename,
-    alleles = "HLA-DPA10105-DPB112501",
+    alleles = "HLA-A02:329",
     peptide_length = 15,
     temp_xls_filename = temp_xls_filename
   )
@@ -40,7 +40,7 @@ test_that("use", {
 test_that("use, multiple alleles", {
   if (!is_netmhcpan_installed()) return()
 
-  alleles <- c("DRB1_0101", "DRB1_0102")
+  alleles <- c("HLA-A02:255", "HLA-A02:302")
   testit::assert(is_netmhcpan_installed())
   testit::assert(all(alleles %in% get_netmhcpan_alleles()))
   fasta_filename <- system.file(
@@ -67,7 +67,7 @@ test_that("abuse", {
   expect_error(
     run_netmhcpan(
       fasta_filename = fasta_filename,
-      alleles = "HLA-DPA10105-DPB112501"
+      alleles = "BoLA-6:01401"
     ),
     "no line starting with a > character found"
   )
@@ -95,7 +95,7 @@ test_that("bug bbbq_1_fast", {
   expect_error(
     run_netmhcpan(
       fasta_filename,
-      alleles = "DRB1_0101",
+      alleles = "HLA-A02:397",
       peptide_length = 13
     ),
     "Sequence in FASTA file shorter than the requested peptide length"
