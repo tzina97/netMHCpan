@@ -6,27 +6,16 @@ test_that("use", {
 test_that("use", {
   if (!is_netmhcpan_installed()) return()
   mhc_haplotypes <- c(
-    "HLA-DRB1*0101",
-    "HLA-DRB1*0301",
-    "HLA-DRB1*0401",
-    "HLA-DRB1*0405",
-    "HLA-DRB1*0701",
-    "HLA-DRB1*0802",
-    "HLA-DRB1*0901",
-    "HLA-DRB1*1101",
-    "HLA-DRB1*1201",
-    "HLA-DRB1*1302",
-    "HLA-DRB1*1501",
-    "HLA-DRB3*0101",
-    "HLA-DRB3*0202",
-    "HLA-DRB4*0101",
-    "HLA-DRB5*0101",
-    "HLA-DQA1*0501/DQB1*0201",
-    "HLA-DQA1*0501/DQB1*0301",
-    "HLA-DQA1*0301/DQB1*0302",
-    "HLA-DQA1*0401/DQB1*0402",
-    "HLA-DQA1*0101/DQB1*0501",
-    "HLA-DQA1*0102/DQB1*0602"
+    "HLA-A02:344",
+    "HLA-A02:28",
+    "HLA-A02:280",
+    "HLA-A02:291",
+    "HLA-A02:317",
+    "HLA-A02:346",
+    "BoLA-1:06701",
+    "DLA-8850801",
+    "Eqca-100101"
+
   )
   for (mhc_haplotype in mhc_haplotypes) {
     netmhcpan_name <- to_netmhcpan_name(mhc_haplotype)

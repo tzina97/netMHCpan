@@ -8,7 +8,7 @@ test_that("use", {
   t <- predict_ic50s(
     protein_sequence = protein_sequence,
     peptide_length = peptide_length,
-    mhc_haplotype = "HLA-DPA10105-DPB112501",
+    mhc_haplotype = "HLA-A02:329",
     temp_fasta_filename = temp_fasta_filename,
     temp_xls_filename = temp_xls_filename
   )
