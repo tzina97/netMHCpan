@@ -1,10 +1,11 @@
 test_that("use", {
-  expect_silent(to_netmhcpan_name("HLA-DRB1*0101"))
-  expect_silent(to_netmhcpan_name("HLA-DQA1*0501/DQB1*0201"))
+  expect_equal(to_netmhcpan_name(mhc_haplotype = "HLA-A*02:01"), "HLA-A0201")
 })
 
 test_that("use", {
+  skip("No idea what are formal names for MHC-I alleles")
   if (!is_netmhcpan_installed()) return()
+
   mhc_haplotypes <- c(
     "HLA-A02:344",
     "HLA-A02:28",
