@@ -48,11 +48,11 @@ run_netmhcpan <- function(
   output_text <- system2(
     command = normalizePath(bin_file_path),
     args = c(
+      "-f", fasta_filename,
       "-a", alleles_as_word,
-      "-length", peptide_length,
-      "-xls", "1",
-      "-xlsfile", temp_xls_filename,
-      "-f", fasta_filename
+      "-l", peptide_length,
+      "-xls",
+      "-xlsfile", temp_xls_filename
     ),
     stdout = TRUE
   )
@@ -84,6 +84,7 @@ run_netmhcpan <- function(
   # with duplicate column names
   df_raw <- utils::read.csv(temp_xls_filename, sep = "\t",
     col.names = c(
+#      "Pos",          MHC        Peptide      Core Of Gp Gl Ip Il        Icore        Identity  Score_EL %Rank_EL BindLevel"
       "Pos", "Peptide", "ID",
       rep(c("one_minus_log50k", "nM", "Rank"), times = length(alleles)),
       "Ave", "NB"
