@@ -46,7 +46,7 @@ run_netmhcpan <- function(
   # change.
   alleles_as_word <- paste0(alleles, sep = ",", collapse = "")
   output_text <- system2(
-    command = bin_file_path,
+    command = normalizePath(bin_file_path),
     args = c(
       "-a", alleles_as_word,
       "-length", peptide_length,
