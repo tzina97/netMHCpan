@@ -4,9 +4,9 @@ author: "Richel J.C. Bilderbeek"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Demo}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+  # %\VignetteIndexEntry{Demo}
+  # %\VignetteEngine{knitr::knitr}
+  # %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include = FALSE}

@@ -5,7 +5,7 @@ test_that("use", {
     "extdata", "example.fasta", package = "netmhcpan"
   )
   temp_xls_filename <- tempfile()
-  df <- run_netMHCpan(
+  df <- run_netmhcpan(
     fasta_filename,
     alleles = "HLA-A02:329",
     peptide_length = 15,
@@ -17,14 +17,14 @@ test_that("use", {
 
   expect_equal(
    colnames(df),
-   c("Pos", "Peptide", "ID", "Allele", "one_minus_log50k", "nM", "Rank")
+   c("Pos", "Peptide", "Identity", "Allele", "one_minus_log50k", "nM", "Rank")
   )
   expect_true(is.numeric(df$Pos))
   expect_true(!is.factor(df$Pos))
   expect_true(is.character(df$Peptide))
   expect_true(!is.factor(df$Peptide))
-  expect_true(is.character(df$ID))
-  expect_true(!is.factor(df$ID))
+  expect_true(is.character(df$Identity))
+  expect_true(!is.factor(df$Identity))
   expect_true(is.character(df$Allele))
   expect_true(!is.factor(df$Allele))
   expect_true(is.numeric(df$one_minus_log50k))
