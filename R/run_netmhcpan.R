@@ -123,7 +123,7 @@ run_netmhcpan <- function(
       stringr::str_match(string = colnames(df_short)[from_col],
       pattern = "one_minus_log50k")
     )
-    from <- as.numeric(as.vector(df_short[, from_col]))
+    from <- suppressWarnings(as.numeric(as.vector(df_short[, from_col])))
     to_row <- 1 + (i_minus_one * n_rows)
     to_row_last <- to_row + n_rows - 1
     df$one_minus_log50k[to_row:to_row_last] <- from
@@ -137,7 +137,7 @@ run_netmhcpan <- function(
       stringr::str_match(string = colnames(df_short)[from_col],
       pattern = "nM")
     )
-    from <- as.numeric(as.vector(df_short[, from_col]))
+    from <-suppressWarnings(as.numeric(as.vector(df_short[, from_col])))
     to_row <- 1 + (i_minus_one * n_rows)
     to_row_last <- to_row + n_rows - 1
     df$nM[to_row:to_row_last] <- from # nolint use same variable as NetMHCpan, which is not all lowercase
@@ -151,7 +151,7 @@ run_netmhcpan <- function(
       stringr::str_match(string = colnames(df_short)[from_col],
       pattern = "Rank")
     )
-    from <- as.numeric(as.vector(df_short[, from_col]))
+    from <-suppressWarnings(as.numeric(as.vector(df_short[, from_col])))
     to_row <- 1 + (i_minus_one * n_rows)
     to_row_last <- to_row + n_rows - 1
     df$Rank[to_row:to_row_last] <- from
