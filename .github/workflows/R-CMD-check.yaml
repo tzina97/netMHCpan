@@ -53,15 +53,15 @@ jobs:
 #        run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
 #        shell: Rscript {0}
 
-      - name: Test coverage
-        env:
-          INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
-        run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then Rscript -e 'covr::codecov()'; fi
+#      - name: Test coverage
+#        env:
+#          INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
+#        run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then Rscript -e 'covr::codecov()'; fi
 
-      - name: Lint
-        env:
-          INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
-        run: if [[ "$INSTALL_NETMHCPAN" == false ]]; then Rscript -e 'lintr::lint_package()'; fi
+#      - name: Lint
+#        env:
+#          INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
+#        run: if [[ "$INSTALL_NETMHCPAN" == false ]]; then Rscript -e 'lintr::lint_package()'; fi
 
       - name: Install package
         run: Rscript -e 'remotes::install_github("tzina97/netMHCpan")'
@@ -69,8 +69,10 @@ jobs:
       - name: Report
         run: Rscript -e 'netmhcpan::netmhcpan_report()'
 
-      - name: Show your alleles
-        run: Rscript -e 'netmhcpan::get_netmhcpan_alleles()'
+      - name: Show your alleles if netMHCpan is installed
+        env:
+          INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
+        run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then Rscript -e 'netmhcpan::get_netmhcpan_alleles()' ; fi
 
       - name: Self-test
         env:
