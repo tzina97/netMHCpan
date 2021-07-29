@@ -49,9 +49,9 @@ jobs:
           INSTALL_NETMHCPAN: ${{ matrix.install_netmhcpan }}
         run: if [[ "$INSTALL_NETMHCPAN" == true ]]; then ./scripts/install_netmhcpan.sh; fi
 
-      - name: Check
-        run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
-        shell: Rscript {0}
+#      - name: Check
+#        run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
+#        shell: Rscript {0}
 
       - name: Test coverage
         env:
