@@ -16,6 +16,11 @@ predict_ic50s <- function(
   temp_xls_filename = netmhcpan::create_temp_xls_filename()
 ) {
   fasta_text <- c(">seq1", protein_sequence)
+  dir.create(
+    basename(temp_fasta_filename),
+    showWarnings = FALSE,
+    recursive = TRUE
+  )
   readr::write_lines(x = fasta_text, temp_fasta_filename)
 
   # Cleans up 'temp_xls_filename'
