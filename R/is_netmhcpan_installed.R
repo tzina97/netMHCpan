@@ -79,13 +79,9 @@ is_netmhcpan_set_up <- function(
   !any(
     grepl(
       x = lines,
-      pattern = paste0(
-        "/usr/cbs/bio/src/",  # nolint file does use absolute path
-        basename(get_default_netmhcpan_subfolder())
-      )
+      pattern = "setenv\tNMHOME\t/net/sund-nas.win.dtu.dk/storage/services/www/packages/netMHCpan/4.1/netMHCpan-4.1"
     )
   )
-  TRUE
 }
 
 #' See if tcsh is installed
