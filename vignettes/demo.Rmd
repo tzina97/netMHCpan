@@ -89,7 +89,7 @@ if (is_netmhcpan_installed()) {
 ```
 To investigate if whole a protein is immunogenic, we need to
 obtain the IC50 values for all its cleaved products.
-As the MHC-II molecules prefers 13 amino acids residues,
+As the MHC-I molecules prefers 13 amino acids residues,
 we can get the IC50 values for each residue as such:
 
 ```{r}

@@ -16,7 +16,6 @@ Description: The field of immunology benefits from software that can
     allows to call 'NetMHCpan' from R.
 License: GPL-3
 Encoding: UTF-8
-LazyData: true
 Imports:
     assertive,
     devtools,
@@ -36,6 +35,6 @@ Suggests:
 VignetteBuilder: knitr
 RoxygenNote: 7.1.1
 Language: en-US
-URL: https://github.com/richelbilderbeek/netmhc2pan/
-BugReports: https://github.com/richelbilderbeek/netmhc2pan/issues
+URL: https://github.com/tzina97/netMHCpan
+BugReports: https://github.com/tzina97/netMHCpan/issues
 SystemRequirements: NetMHCpan (http://www.cbs.dtu.dk/services/NetMHCpan/)

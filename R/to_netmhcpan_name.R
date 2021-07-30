@@ -10,10 +10,13 @@ to_netmhcpan_name <- function(mhc_haplotype) {
     ""
   )
 
-  # s <- stringr::str_replace_all(
+  #   if (mhc_haplotype == )
+  #   s <- stringr::str_replace_all(
   #   s,
   #   ":",
   #   ""
   # )
   s
 }
+
+
