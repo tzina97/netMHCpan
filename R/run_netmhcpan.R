@@ -41,8 +41,7 @@ run_netmhcpan <- function(
     basename(get_default_netmhcpan_bin_path())
   )
   testthat::expect_true(file.exists(bin_file_path))
-  dir.create(basename(
-    temp_xls_filename),
+  dir.create(basename(temp_xls_filename),
     showWarnings = FALSE,
     recursive = TRUE
   )
@@ -61,6 +60,10 @@ run_netmhcpan <- function(
     ),
     stdout = TRUE
   )
+  error_lines <- stringr::str_subset(output_text, "Error")
+  if (length(error_lines) != 0) {
+    stop(error_lines)
+  }
   if (length(output_text) == 1 &&
       output_text == "ERROR: Input file is not in FASTA format"
   ) {
