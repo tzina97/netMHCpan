@@ -2,6 +2,10 @@ test_that("use", {
   expect_equal(to_netmhcpan_name(mhc_haplotype = "HLA-A*02:01"), "HLA-A02:01")
 })
 
+test_that("use", {
+  expect_equal(to_netmhcpan_name(mhc_haplotype = "DLA-88*508:01"), "DLA-8850801")
+})
+
 #Haven't matched for DLA patterns yet.
 
 test_that("use", {

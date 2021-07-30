@@ -22,7 +22,7 @@ MHC haplotypes.
 
 First load the library:
 
-```{r}
+```
 library(netmhcpan)
 ```
 
@@ -40,7 +40,7 @@ install_netmhcpan(" ")
 The installation of `netmhcpan` is checked, with
 the goal of producing a helpful error message:
 
-```{r}
+```
 tryCatch(
   check_netmhcpan_installation(),
   error = function(e) print(e)
@@ -49,7 +49,7 @@ tryCatch(
 
 Now, lets use the sequence of an example protein:
 
-```{r}
+```
 sequence <- "FAMILYVWFAMILYV"
 message(sequence)
 ```
@@ -57,7 +57,7 @@ message(sequence)
 Now, we need to select an MHC haplotype. There are many alleles,
 so first we count the number of haplotypes:
 
-```{r}
+```
 if (is_netmhcpan_installed()) {
   mhc_haplotypes <- get_netmhcpan_alleles()
   length(mhc_haplotypes)
@@ -66,7 +66,7 @@ if (is_netmhcpan_installed()) {
 
 Now, we simply pick the first haplotype:
 
-```{r}
+```
 if (is_netmhcpan_installed()) {
   mhc_haplotype <- mhc_haplotypes[1]
 }
@@ -76,7 +76,7 @@ Now, we can predict how strong our peptide binds to our allele, by obtaining the
 value in nanomolars (nM), of which lower values indicate stronger
 binders:
 
-```{r}
+```
 if (is_netmhcpan_installed()) {
   knitr::kable(
     predict_ic50(
@@ -92,7 +92,7 @@ obtain the IC50 values for all its cleaved products.
 As the MHC-I molecules prefers 13 amino acids residues,
 we can get the IC50 values for each residue as such:
 
-```{r}
+```
 if (is_netmhcpan_installed()) {
   knitr::kable(
     predict_ic50s(

@@ -10,13 +10,12 @@ to_netmhcpan_name <- function(mhc_haplotype) {
     ""
   )
 
-  #   if (mhc_haplotype == )
-  #   s <- stringr::str_replace_all(
+  #Need commented-out code only for DLA-starting alleles
+
+  # s <- stringr::str_replace_all(
   #   s,
   #   ":",
   #   ""
   # )
   s
 }
-
-
