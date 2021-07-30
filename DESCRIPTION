@@ -16,7 +16,6 @@ Description: The field of immunology benefits from software that can
     allows to call 'NetMHCpan' from R.
 License: GPL-3
 Encoding: UTF-8
-LazyData: true
 Imports:
     assertive,
     devtools,
