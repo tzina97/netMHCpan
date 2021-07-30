@@ -41,6 +41,11 @@ run_netmhcpan <- function(
     basename(get_default_netmhcpan_bin_path())
   )
   testthat::expect_true(file.exists(bin_file_path))
+  dir.create(basename(
+    temp_xls_filename),
+    showWarnings = FALSE,
+    recursive = TRUE
+  )
   # Adding '-filter' and '1' top the args does not help: the XLS
   # file is created without the desired filter. The text output does
   # change.
