@@ -8,8 +8,8 @@ test_that("use", {
 
 test_that("install NetMHCpan to a custom location", {
 
-  if (!is_on_travis()) return()
-  if (!is_url_valid()) return()
+  if (!is_on_travis())
+  if (!is_url_valid())
 
   # Binary tarball: use local version if available
   netmhcpan_bin_tarfile_path <- tempfile()

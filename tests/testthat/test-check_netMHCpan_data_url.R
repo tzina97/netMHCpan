@@ -1,5 +1,5 @@
 test_that("use", {
-  if (!is_on_travis()) return()
+  if (!is_on_travis())
 
   # This test will break if www.cbs.dtu.dk is down,
   # here I assume it is usually up :-)
@@ -7,7 +7,7 @@ test_that("use", {
 })
 
 test_that("be verbose", {
-  if (!is_on_travis()) return()
+  if (!is_on_travis())
   expect_message(
     check_netmhcpan_data_url(verbose = TRUE),
     "netmhcpan_data_url"

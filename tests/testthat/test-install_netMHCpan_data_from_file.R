@@ -1,7 +1,7 @@
 test_that("use", {
 
-  if (!is_on_travis()) return()
-  if (!is_url_valid()) return()
+  if (!is_on_travis())
+  if (!is_url_valid())
 
   # Data tarball: use local version if available
   netmhcpan_data_tarfile_path <- tempfile()

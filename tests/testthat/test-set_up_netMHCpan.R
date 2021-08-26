@@ -1,8 +1,8 @@
 
 test_that("set_up_netmhcpan", {
 
-  if (!is_on_travis()) return()
-  if (!is_url_valid()) return()
+  if (!is_on_travis())
+  if (!is_url_valid())
 
   netmhcpan_folder_name <- tempfile()
   if (dir.exists(netmhcpan_folder_name)) {

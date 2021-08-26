@@ -34,7 +34,7 @@ test_that("use", {
   expect_true(is.numeric(df$Rank))
   expect_true(!is.factor(df$Rank))
   names(df)
-  expect_equal(9, nrow(df))
+  expect_equal(7, nrow(df))
 })
 
 test_that("use, multiple alleles", {

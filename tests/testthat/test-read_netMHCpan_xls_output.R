@@ -17,7 +17,7 @@ test_that("use", {
 
 test_that("use", {
 
-  skip("Cannot parse output with 2 alleles yet")
+
   xls_filename <- system.file(
     "extdata", "example2.xls", package = "netmhcpan"
   )

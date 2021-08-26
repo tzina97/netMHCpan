@@ -1,6 +1,6 @@
 test_that("uninstall absent NetMHCpan must throw", {
 
-  if (is_netmhcpan_installed()) return()
+  if (is_netmhcpan_installed())
 
   expect_error(
     uninstall_netmhcpan(netmhcpan_folder_name = "/abs/ent"), # nolint use absolute path
@@ -10,8 +10,8 @@ test_that("uninstall absent NetMHCpan must throw", {
 
 test_that("see if NetMHCpan is detected at a custom location", {
 
-  if (!is_on_travis()) return()
-  if (!is_url_valid()) return()
+  if (!is_on_travis())
+  if (!is_url_valid())
 
   netmhcpan_folder_name <- tempfile(pattern = "netmhcpan_")
   expect_false(
