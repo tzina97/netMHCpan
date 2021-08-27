@@ -8,8 +8,7 @@ test_that("use", {
 
 test_that("abuse", {
 
-  if (!is_on_travis())
-  if (!is_url_valid())
+  if (!is_url_valid()) return()
 
   netmhcpan_folder_name <- tempfile()
   if (dir.exists(netmhcpan_folder_name)) {

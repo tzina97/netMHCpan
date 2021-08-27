@@ -16,8 +16,6 @@ test_that("use", {
 })
 
 test_that("use", {
-
-
   xls_filename <- system.file(
     "extdata", "example2.xls", package = "netmhcpan"
   )

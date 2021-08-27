@@ -1,7 +1,6 @@
 test_that("install NetMHCpan binary to a custom location", {
 
-  if (!is_on_travis())
-  if (!is_url_valid())
+  if (!is_url_valid()) return()
 
   netmhcpan_bin_tarfile_path <- tempfile("install_netmhcpan_bin_from_file_")
   download_netmhcpan_bin()

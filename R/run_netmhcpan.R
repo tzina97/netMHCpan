@@ -2,18 +2,18 @@
 #' @inheritParams default_params_doc
 #' @return a data frame with the NetMHCpan results
 #' @examples
-#' if (is_netmhcpan_installed()) {
-#'
-#'   fasta_filename <- system.file(
-#'     "extdata", "example.fasta", package = "netmhcpan"
-#'   )
-#'   run_netmhcpan(fasta_filename)
-#'
-#'   # Two alleles
-#'   alleles <- c("HLA-A0101", "HLA-A0102")
-#'   # Run NetMHCpan with these two alleles
-#'   run_netmhcpan(fasta_filename, alleles = alleles)
-#' }
+# if (is_netmhcpan_installed()) {
+#
+#   fasta_filename <- system.file(
+#     "extdata", "example.fasta", package = "netmhcpan"
+#   )
+#   run_netmhcpan(fasta_filename)
+#
+#   # Two alleles
+#   alleles <- c("HLA-A0101", "HLA-A0102")
+#   # Run NetMHCpan with these two alleles
+#   run_netmhcpan(fasta_filename, alleles = alleles)
+# }
 #' @author Richèl J.C. Bilderbeek
 #' @export
 run_netmhcpan <- function(
@@ -102,7 +102,7 @@ run_netmhcpan <- function(
   names(df_raw)
   # Convert to short form
   # Get rid of weird header
-  df_short <- df_raw[c(-1, -2), ]
+  df_short <- df_raw[c(-1, -2), ] ## What does this do??
   # Get rid of 'Ave' and 'NB' column
   colnames(df_short)[ncol(df_short) - 1] == "Ave"
   colnames(df_short)[ncol(df_short) - 0] == "NB"

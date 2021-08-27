@@ -1,6 +1,5 @@
 test_that("use", {
-  if (!is_on_travis())
-  if (!is_url_valid())
+  if (!is_url_valid()) return()
 
   netmhcpan_tarfile_path <- tempfile(pattern = "netmhcpan_")
 
@@ -11,8 +10,7 @@ test_that("use", {
 })
 
 test_that("use, verbose", {
-  if (!is_on_travis())
-  if (!is_url_valid())
+  if (!is_url_valid()) return()
 
   expect_message(
     download_netmhcpan_bin(

@@ -1,7 +1,6 @@
 test_that("install_netmhcpan_data", {
 
-  if (!is_on_travis())
-  if (!is_url_valid())
+  if (!is_url_valid()) return()
 
   netmhcpan_folder_name <- tempdir()
   if (dir.exists(netmhcpan_folder_name)) {

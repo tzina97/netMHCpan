@@ -4,8 +4,7 @@ test_that("use", {
 })
 
 test_that("use", {
-  if (!is_on_travis())
-  if (!is_url_valid())
+  if (!is_url_valid()) return()
 
   if (is_netmhcpan_installed()) {
     uninstall_netmhcpan()
@@ -24,8 +23,7 @@ test_that("use", {
 
 test_that("uninstall NetMHCpan from a custom location", {
 
-  if (!is_on_travis())
-  if (!is_url_valid())
+  if (!is_url_valid()) return()
 
   netmhcpan_folder_name <- tempfile(pattern = "netmhcpan_")
   install_netmhcpan(netmhcpan_folder_name = netmhcpan_folder_name)
