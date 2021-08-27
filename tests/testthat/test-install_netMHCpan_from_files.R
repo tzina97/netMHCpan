@@ -24,8 +24,9 @@ test_that("install NetMHCpan to a custom location", {
       netmhcpan_data_tarfile_path
     )
   } else {
-    download_netmhcpan_data(
-      netmhcpan_data_tarfile_path = netmhcpan_data_tarfile_path
+    install_netmhcpan_data(
+      netmhcpan_data_url = netmhcpan_data_url,
+      netmhcpan_folder_name = netmhcpan_folder_name
     )
   }
   expect_true(file.exists(netmhcpan_data_tarfile_path))
