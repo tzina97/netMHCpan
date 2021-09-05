@@ -14,7 +14,7 @@ test_that("use, verbose", {
 
   expect_message(
     download_netmhcpan_bin(
-      netmhcpan_tarfile_path = tempfile(pattern = "netmhcpan_"),
+      netmhcpan_bin_tarfile_path = tempfile(pattern = "netmhcpan_"),
       verbose = TRUE
     )
   )

@@ -4,6 +4,7 @@ test_that("use", {
 
   # Data tarball: use local version if available
   netmhcpan_data_tarfile_path <- tempfile()
+  netmhcpan_data_url = get_netmhcpan_data_url()
   if (file.exists("~/data.Linux.tar.gz")) {
     file.copy(
       from = "~/data.Linux.tar.gz",

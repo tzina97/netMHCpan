@@ -16,6 +16,10 @@ test_that("install NetMHCpan to a custom location", {
   }
   expect_true(file.exists(netmhcpan_bin_tarfile_path))
 
+  netmhcpan_folder_name <- tempfile(pattern = "netmhcpan_")
+  expect_false(dir.exists(netmhcpan_folder_name))
+  netmhcpan_data_url = get_netmhcpan_data_url()
+
   # Data tarball: use local version if available
   netmhcpan_data_tarfile_path <- tempfile()
   if (file.exists("~/data.Linux.tar.gz")) {
@@ -31,8 +35,6 @@ test_that("install NetMHCpan to a custom location", {
   }
   expect_true(file.exists(netmhcpan_data_tarfile_path))
 
-  netmhcpan_folder_name <- tempfile(pattern = "netmhcpan_")
-  expect_false(dir.exists(netmhcpan_folder_name))
 
   expect_silent(
     install_netmhcpan_from_files(

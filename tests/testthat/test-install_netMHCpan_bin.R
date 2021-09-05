@@ -43,7 +43,7 @@ test_that("abuse", {
       netmhcpan_folder_name = netmhcpan_folder_name,
       netmhcpan_bin_url = "nonsense"
     ),
-    "'download_url' is invalid"
+    "'netmhcpan_bin_url' is invalid"
   )
 
   # Re-install NetMHCpan
