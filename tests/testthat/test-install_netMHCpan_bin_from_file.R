@@ -3,7 +3,7 @@ test_that("install NetMHCpan binary to a custom location", {
   if (!is_url_valid()) return()
 
   netmhcpan_bin_tarfile_path <- tempfile("install_netmhcpan_bin_from_file_")
-  download_netmhcpan_bin()
+  download_netmhcpan_bin(netmhcpan_bin_tarfile_path)
   expect_true(file.exists(netmhcpan_bin_tarfile_path))
 
   netmhcpan_folder_name <- tempfile(pattern = "netmhcpan_")

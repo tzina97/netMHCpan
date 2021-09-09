@@ -36,20 +36,6 @@ a data frame with the NetMHCpan results
 \description{
 Run NetMHCpan
 }
-\examples{
-if (is_netmhcpan_installed()) {
-
-  fasta_filename <- system.file(
-    "extdata", "example.fasta", package = "netmhcpan"
-  )
-  run_netmhcpan(fasta_filename)
-
-  # Two alleles
-  alleles <- c("HLA-A0101", "HLA-A0102")
-  # Run NetMHCpan with these two alleles
-  run_netmhcpan(fasta_filename, alleles = alleles)
-}
-}
 \author{
 Richèl J.C. Bilderbeek
 }

@@ -12,6 +12,8 @@ test_that("install must be silent by default", {
   )
 })
 
+
+
 test_that("verbose install must produce", {
   if (!is_url_valid()) return()
 

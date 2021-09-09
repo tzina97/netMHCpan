@@ -4,7 +4,7 @@ test_that("use", {
   netmhcpan_tarfile_path <- tempfile(pattern = "netmhcpan_")
 
   expect_silent(
-    download_netmhcpan_bin()
+    download_netmhcpan_bin(netmhcpan_bin_tarfile_path = netmhcpan_tarfile_path)
   )
   expect_true(file.exists(netmhcpan_tarfile_path))
 })
