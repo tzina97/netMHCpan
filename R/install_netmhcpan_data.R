@@ -24,7 +24,7 @@ install_netmhcpan_data <- function(
     "data"
   )
   if (file.exists(data_folder_path)) {
-    return("NetMHCpan data is already installed")
+    stop ("NetMHCpan data is already installed")
   }
 
   local_path <- file.path(
