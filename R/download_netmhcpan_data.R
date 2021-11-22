@@ -19,16 +19,16 @@ download_netmhcpan_data <- function(
     )
   }
 
-  netmhcpan::check_can_create_file(
-    filename = netmhcpan_data_tarfile_path,
-    overwrite = FALSE
-  )
-
-  dir.create(
-    path = dirname(netmhcpan_data_tarfile_path),
-    showWarnings = TRUE,
-    recursive = TRUE
-  )
+  # netmhcpan::check_can_create_file(
+  #   filename = netmhcpan_data_tarfile_path,
+  #   overwrite = FALSE
+  # )
+  #
+  # dir.create(
+  #   path = dirname(netmhcpan_data_tarfile_path),
+  #   showWarnings = TRUE,
+  #   recursive = TRUE
+  # )
 
 
 tryCatch(
@@ -48,7 +48,7 @@ tryCatch(
       "\n",
       paste0(
         "https://services.healthtech.dtu.dk/cgi-bin/sw_request",
-        netmhcpan_version,
+        netmhcpan_version= get_default_netmhcpan_version(),
         "\n"
       ),
       "Full error message: \n",

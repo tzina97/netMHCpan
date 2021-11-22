@@ -14,6 +14,7 @@ download_netmhcpan_bin <- function(
   netmhcpan_bin_tarfile_path = get_default_netmhcpan_bin_tarfile_path(),
   verbose = FALSE,
   netmhcpan_archive_filename = get_netmhcpan_archive_filename(),
+
   temp_local_file = tempfile(pattern = "netmhcpan_download_netmhcpan_")
 ) {
   netmhcpan::check_netmhcpan_bin_url(
@@ -32,16 +33,16 @@ download_netmhcpan_bin <- function(
     )
   }
 
-  netmhcpan::check_can_create_file(
-    filename = netmhcpan_bin_tarfile_path,
-    overwrite = FALSE
-  )
-
-  dir.create(
-    path = dirname(netmhcpan_bin_tarfile_path),
-    showWarnings = FALSE,
-    recursive = TRUE
-  )
+  # netmhcpan::check_can_create_file(
+  #   filename = netmhcpan_bin_tarfile_path,
+  #   overwrite = FALSE
+  # )
+  #
+  # dir.create(
+  #   path = dirname(netmhcpan_bin_tarfile_path),
+  #   showWarnings = FALSE,
+  #   recursive = TRUE
+  # )
 
 
   tryCatch(

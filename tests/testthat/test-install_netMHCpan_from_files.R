@@ -9,6 +9,7 @@ test_that("install NetMHCpan to a custom location", {
       from = "~/netmhcpan-4.1.Linux.tar.gz",
       netmhcpan_bin_tarfile_path
     )
+
   } else {
     download_netmhcpan_bin(
       netmhcpan_bin_tarfile_path = netmhcpan_bin_tarfile_path
@@ -28,9 +29,8 @@ test_that("install NetMHCpan to a custom location", {
       netmhcpan_data_tarfile_path
     )
   } else {
-    install_netmhcpan_data(
-      netmhcpan_data_url = netmhcpan_data_url,
-      netmhcpan_folder_name = netmhcpan_folder_name
+    download_netmhcpan_data(
+      netmhcpan_data_tarfile_path = netmhcpan_data_tarfile_path
     )
   }
   expect_true(file.exists(netmhcpan_data_tarfile_path))
