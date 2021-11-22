@@ -20,7 +20,7 @@ test_that("Reinstall to same location must give error", {
 
 
   expect_error(
-    install_netmhcpan_data_from_file(netmhcpan_folder_name = netmhcpan_folder_name),
+    install_netmhcpan_data_from_file(netmhcpan_data_tarfile_path = netmhcpan_data_tarfile_path, netmhcpan_folder_name = netmhcpan_folder_name),
     "NetMHCpan data is already installed"
   )
 })

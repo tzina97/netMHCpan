@@ -18,7 +18,7 @@ install_netmhcpan_data_from_file <- function( # nolint long function name indeed
   verbose = FALSE
 ) {
   testthat::expect_true(file.exists(netmhcpan_data_tarfile_path))
-  data_folder_path <- file.path(
+  data_folder_path <- file.path( #
     netmhcpan_folder_name,
     basename(get_default_netmhcpan_subfolder()),
     "data"

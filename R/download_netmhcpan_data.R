@@ -1,6 +1,6 @@
 download_netmhcpan_data <- function(
   netmhcpan_data_url = get_netmhcpan_data_url(),
-  netmhcpan_data_tarfile_path = get_default_netmhcpan_bin_tarfile_path(),
+  netmhcpan_data_tarfile_path = get_default_netmhcpan_data_tarfile_path(),
   verbose = FALSE,
   temp_local_file = tempfile(pattern = "netmhcpan_download_netmhcpan_data_")
 ) {
@@ -26,10 +26,37 @@ download_netmhcpan_data <- function(
 
   dir.create(
     path = dirname(netmhcpan_data_tarfile_path),
-    showWarnings = FALSE,
+    showWarnings = TRUE,
     recursive = TRUE
   )
 
 
-  testit::assert(file.exists(netmhcpan_data_tarfile_path))
+tryCatch(
+  suppressWarnings(
+    utils::download.file(
+      url = url,
+      destfile = netmhcpan_data_tarfile_path,
+      method = "libcurl",
+      quiet = !verbose
+    )
+  ),
+  error = function(e) {is_url_valid()
+    stop(
+      "'netmhcpan_data_url' is invalid.\n",
+      "URL: ", url, "\n",
+      "Request a download URL at the NetMHCpan request page at\n",
+      "\n",
+      paste0(
+        "https://services.healthtech.dtu.dk/cgi-bin/sw_request",
+        netmhcpan_version,
+        "\n"
+      ),
+      "Full error message: \n",
+      "\n",
+      e
+    )
+  }
+)
+testit::assert(file.exists(netmhcpan_data_tarfile_path))
 }
+
