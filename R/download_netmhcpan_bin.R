@@ -33,16 +33,16 @@ download_netmhcpan_bin <- function(
     )
   }
 
-  # netmhcpan::check_can_create_file(
-  #   filename = netmhcpan_bin_tarfile_path,
-  #   overwrite = FALSE
-  # )
-  #
-  # dir.create(
-  #   path = dirname(netmhcpan_bin_tarfile_path),
-  #   showWarnings = FALSE,
-  #   recursive = TRUE
-  # )
+  netmhcpan::check_can_create_file(
+    filename = netmhcpan_bin_tarfile_path,
+    overwrite = FALSE
+  )
+
+  dir.create(
+    path = dirname(netmhcpan_bin_tarfile_path),
+    showWarnings = FALSE,
+    recursive = TRUE
+  )
 
 
   tryCatch(

@@ -92,9 +92,7 @@ run_netmhcpan <- function(
   # with duplicate column names
   df_raw <- utils::read.csv(temp_xls_filename, sep = "\t",
     col.names = c(
-     "Pos", "MHC", "Peptide", "Core Of Gp Gl Ip Il", "Icore", "Identity", "Score_EL", "%Rank_EL", "BindLevel",
-      rep(c("one_minus_log50k", "nM", "Rank"), times = length(alleles)),
-      "Ave", "NB"
+     "Pos", "MHC", "Peptide", "Core Of Gp Gl Ip Il", "Icore", "Identity", "Score_EL", "%Rank_EL", "BindLevel"
     ),
     header = FALSE,
     stringsAsFactors = FALSE

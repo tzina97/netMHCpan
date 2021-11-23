@@ -19,16 +19,17 @@ download_netmhcpan_data <- function(
     )
   }
 
-  # netmhcpan::check_can_create_file(
-  #   filename = netmhcpan_data_tarfile_path,
-  #   overwrite = FALSE
-  # )
-  #
-  # dir.create(
-  #   path = dirname(netmhcpan_data_tarfile_path),
-  #   showWarnings = TRUE,
-  #   recursive = TRUE
-  # )
+#this is where the tarfile will be
+netmhcpan::check_can_create_file(
+  filename = netmhcpan_data_tarfile_path,
+  overwrite = FALSE
+)
+
+dir.create(
+  path = dirname(netmhcpan_data_tarfile_path),
+  showWarnings = FALSE,
+  recursive = TRUE
+)
 
 
 tryCatch(
