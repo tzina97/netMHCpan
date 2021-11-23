@@ -90,6 +90,9 @@ run_netmhcpan <- function(
   # For 1 alelle, the XLS is easy to parse
   # For multiple alleles, the XLS is saved in wide format,
   # with duplicate column names
+
+  output_text
+  # utils::read.csv(temp_xls_filename, sep = "\t")
   df_raw <- utils::read.csv(temp_xls_filename, sep = "\t",
     col.names = c(
      "Pos", "MHC", "Peptide", "Core Of Gp Gl Ip Il", "Icore", "Identity", "Score_EL", "%Rank_EL", "BindLevel"
