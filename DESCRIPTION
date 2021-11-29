@@ -33,7 +33,7 @@ Suggests:
     testthat,
     spelling
 VignetteBuilder: knitr
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Language: en-US
 URL: https://github.com/tzina97/netMHCpan
 BugReports: https://github.com/tzina97/netMHCpan/issues
